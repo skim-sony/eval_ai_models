@@ -4,8 +4,8 @@
 		"camera": {
 			"camera_name": 1,
 			"video_file_name": "1.mp4",
-			"image_height": 480,
-			"image_width": 640,
+			"input_tensor_height": 480,
+			"input_tensor_width": 640,
 			"total_image_frames": 100 
 		},
 		"traffic_counting": {

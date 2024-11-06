@@ -23,6 +23,8 @@
             },
             "input_tensor_height": {"type": "integer"},
             "input_tensor_width": {"type": "integer"},
+            "output_tensor_height": {"type": "integer"},
+            "output_tensor_width": {"type": "integer"},
             "total_image_frames": {
               "description": "Leave as -1 if it's online processing",
               "type": "integer"

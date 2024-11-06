@@ -99,7 +99,7 @@
 		  "status": true,
 		  "double_parking_dwell_time": 0,
 		  "vehicle_blocked_lane_types": "parking",
-		  "location": {
+		  "double_parking_location": {
 			"type": "Point",
 			"coordinates": [
 			  [ -85.7629808, 38.257341 ]

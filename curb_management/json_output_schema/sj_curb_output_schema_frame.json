@@ -250,7 +250,7 @@
                     "required": ["type", "coordinates"]
                   }
                 },
-                "required": ["status", "double_parking_dwell_time"]
+                "required": ["status"]
               }
             },
           "required": ["occupied", "parking_dwell_time"]

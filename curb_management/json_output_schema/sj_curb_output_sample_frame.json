@@ -1,54 +1,52 @@
 {
-	"config": {
-		"source_type": "camera",
-		"camera": {
-			"camera_name": 1,
-			"video_file_name": "1.mp4",
-			"total_image_frames": 100 
-		},
-		"input_tensor_height": 480,
-		"input_tensor_width": 640,
-		"output_tensor_height": 480,
-		"output_tensor_width": 640,
-		"traffic_counting": {
-			"type": "LineString",
-			"coordinates": [
-				[
-					[100.0, 0.0],
-					[101.0, 1.0]
-				],
-				[
-					[102.0, 2.0],
-					[103.0, 3.0]
-				]
+  "config": {
+	"source_type": "camera",
+	"camera_name": 1,
+	"video_file_name": "1.mp4",
+	"total_image_frames": 100,
+	"input_tensor_height": 480,
+	"input_tensor_width": 640,
+	"output_tensor_height": 480,
+	"output_tensor_width": 640,
+	"traffic_counting": {
+		"type": "LineString",
+		"coordinates": [
+			[
+				[100.0, 0.0],
+				[101.0, 1.0]
+			],
+			[
+				[102.0, 2.0],
+				[103.0, 3.0]
 			]
-		},
-		"bike_counting": {
-			"type": "LineString",
-			"coordinates": [
-				[
-					[100.0, 0.0],
-					[101.0, 1.0]
-				],
-				[
-					[102.0, 3.0],
-					[103.0, 4.0]
-				]
-			]
-		},
-		"pedestrian_counting": {
-			"type": "Polygon",
-			"coordinates": [
-				[
-					[100.0, 0.0],
-					[101.0, 0.0],
-					[101.0, 1.0],
-					[100.0, 1.0],
-					[100.0, 0.0]
-				]
-			]
-		}
+		]
 	},
+	"bike_counting": {
+		"type": "LineString",
+		"coordinates": [
+			[
+				[100.0, 0.0],
+				[101.0, 1.0]
+			],
+			[
+				[102.0, 3.0],
+				[103.0, 4.0]
+			]
+		]
+	},
+	"pedestrian_counting": {
+		"type": "Polygon",
+		"coordinates": [
+			[
+				[100.0, 0.0],
+				[101.0, 0.0],
+				[101.0, 1.0],
+				[100.0, 1.0],
+				[100.0, 0.0]
+			]
+		]
+	}
+},
 	
 	
 	"output":[

@@ -4,12 +4,12 @@
 		"camera": {
 			"camera_name": 1,
 			"video_file_name": "1.mp4",
-			"input_tensor_height": 480,
-			"input_tensor_width": 640,
-			"output_tensor_height": 480,
-			"output_tensor_width": 640,
 			"total_image_frames": 100 
 		},
+		"input_tensor_height": 480,
+		"input_tensor_width": 640,
+		"output_tensor_height": 480,
+		"output_tensor_width": 640,
 		"traffic_counting": {
 			"type": "LineString",
 			"coordinates": [

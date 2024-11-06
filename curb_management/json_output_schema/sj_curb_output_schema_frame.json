@@ -21,22 +21,20 @@
               "description": "Leave as 'null' if it's online processing",
               "type": "string"
             },
-            "input_tensor_height": {"type": "integer"},
-            "input_tensor_width": {"type": "integer"},
-            "output_tensor_height": {"type": "integer"},
-            "output_tensor_width": {"type": "integer"},
             "total_image_frames": {
               "description": "Leave as -1 if it's online processing",
               "type": "integer"
             }
           },
           "required": [
-            "camera_name",
-            "image_height",
-            "image_width"
+            "camera_name"
           ]
         },
-		
+        "input_tensor_height": {"type": "integer"},
+        "input_tensor_width": {"type": "integer"},
+        "output_tensor_height": {"type": "integer"},
+        "output_tensor_width": {"type": "integer"},
+
         "traffic_counting": {
           "type": "object",
           "properties": {
@@ -115,7 +113,7 @@
             "required": ["type", "coordinates"]
           }
         },
-        "required": ["source_type", "camera", "traffic_counting", "bike_counting", "pedestrian_counting"]
+        "required": ["source_type", "camera", "input_tensor_height", "input_tensor_width", "output_tensor_height", "output_tensor_width", "traffic_counting", "bike_counting", "pedestrian_counting"]
       },
       
     

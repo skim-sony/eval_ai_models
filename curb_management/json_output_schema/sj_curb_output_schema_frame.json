@@ -134,7 +134,7 @@
             "required": ["type", "coordinates"]
           }
         },
-        "required": ["source_type", "camera_name", "input_tensor_height", "input_tensor_width", "output_tensor_height", "output_tensor_width", "traffic_counting", "bike_counting", "pedestrian_counting", "parking_zone"]
+        "required": ["source_type", "camera_name", "input_tensor_height", "input_tensor_width", "output_tensor_height", "output_tensor_width", "traffic_counting", "bike_counting", "pedestrian_counting"]
       },
       
     
@@ -228,29 +228,32 @@
                   "vehicle_blocked_lane_types":{
                     "type": "string"
                   },
-                  "location": {
+                  "double_parking_location": {
                     "type": "object",
                     "properties": {
                       "type": {
                         "type": "string",
-                        "enum": ["Point"]
+                        "enum": ["Point", "Polygon"]
                       },
                       "coordinates": {
                         "type": "array",
                         "items": {
-                          "type": "number"
-                        },
-                        "minItems": 2,
-                        "maxItems": 2
+                          "type": "array",
+                          "items": {
+                            "type": "number"
+                          },
+                          "minItems": 2,
+                          "maxItems": 2
+                        }
                       }
                     },
                     "required": ["type", "coordinates"]
                   }
                 },
-                "required": ["status"]
+                "required": ["status", "double_parking_dwell_time"]
               }
             },
-          "required": ["occupied", "parking_dwell_time", "double_parking_status"]
+          "required": ["occupied", "parking_dwell_time"]
           }
         },
         "required": [
@@ -260,8 +263,7 @@
           "object_scores",
           "traffic_counting",
           "bike_counting",
-          "pedestrian_counting",
-          "parking_status"
+          "pedestrian_counting"
         ]
       }
     }

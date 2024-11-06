@@ -96,7 +96,7 @@
 		"occupied": [true, false, false, false, false],
 		"parking_dwell_time": [5, 0, 0, 0, 0],
 		"double_parking_status": {
-		  "status": false,
+		  "status": true,
 		  "double_parking_dwell_time": 0,
 		  "vehicle_blocked_lane_types": "parking",
 		  "location": {
@@ -119,13 +119,7 @@
 		"occupied": [true, false, false, false, false],
 		"parking_dwell_time": [10, 0, 0, 0, 0],
 		"double_parking_status": {
-		  "status": false,
-		  "double_parking_dwell_time": 0,
-		  "vehicle_blocked_lane_types": "parking",
-		  "location": {
-			"type": "Point",
-			"coordinates": [ -85.7629808, 38.257341 ]
-		  }
+		  "status": false
 		}
 	  }
 	}

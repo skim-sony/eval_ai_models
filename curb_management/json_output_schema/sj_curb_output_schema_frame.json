@@ -247,7 +247,7 @@
                     "required": ["type", "coordinates"]
                   }
                 },
-                "required": ["status", "double_parking_dwell_time", "vehicle_blocked_lane_types", "location"]
+                "required": ["status"]
               }
             },
           "required": ["occupied", "parking_dwell_time", "double_parking_status"]

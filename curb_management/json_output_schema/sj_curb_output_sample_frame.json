@@ -41,8 +41,42 @@
 		  [100.0, 0.0],
 		  [101.0, 0.0],
 		  [101.0, 1.0],
-		  [100.0, 1.0],
-		  [100.0, 0.0]
+		  [100.0, 1.0]
+		]
+	  ]
+	},
+	"parking_zone": {
+	  "type": "Polygon",
+	  "coordinates": [
+		[
+		  [100.0, 0.0],
+		  [101.0, 0.0],
+		  [101.0, 1.0],
+		  [100.0, 1.0]
+		],
+		[
+		  [100.0, 0.0],
+		  [101.0, 0.0],
+		  [101.0, 1.0],
+		  [100.0, 1.0]
+		],
+		[
+		  [100.0, 0.0],
+		  [101.0, 0.0],
+		  [101.0, 1.0],
+		  [100.0, 1.0]
+		],
+		[
+		  [100.0, 0.0],
+		  [101.0, 0.0],
+		  [101.0, 1.0],
+		  [100.0, 1.0]
+		],
+		[
+		  [100.0, 0.0],
+		  [101.0, 0.0],
+		  [101.0, 1.0],
+		  [100.0, 1.0]
 		]
 	  ]
 	}
@@ -58,7 +92,19 @@
 	  "traffic_counting": [3, 0],
 	  "bike_counting": [0, 0],
 	  "pedestrian_counting": 0,
-	  "double_parking_status": false
+	  "parking_status":{
+		"occupied": [true, false, false, false, false],
+		"parking_dwell_time": [5, 0, 0, 0, 0],
+		"double_parking_status": {
+		  "status": false,
+		  "double_parking_dwell_time": 0,
+		  "vehicle_blocked_lane_types": "parking",
+		  "location": {
+			"type": "Point",
+			"coordinates": [ -85.7629808, 38.257341 ]
+		  }
+		}
+	  }
 	},
 	{
 	  "frame_num": 1,
@@ -69,7 +115,19 @@
 	  "traffic_counting": [3, 0],
 	  "bike_counting": [0, 0],
 	  "pedestrian_counting": 0,
-	  "double_parking_status": false
+	  "parking_status":{
+		"occupied": [true, false, false, false, false],
+		"parking_dwell_time": [10, 0, 0, 0, 0],
+		"double_parking_status": {
+		  "status": false,
+		  "double_parking_dwell_time": 0,
+		  "vehicle_blocked_lane_types": "parking",
+		  "location": {
+			"type": "Point",
+			"coordinates": [ -85.7629808, 38.257341 ]
+		  }
+		}
+	  }
 	}
   ]
 }

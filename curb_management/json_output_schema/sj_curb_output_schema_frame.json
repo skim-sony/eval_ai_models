@@ -31,7 +31,7 @@
           "required": [
             "camera_name",
             "image_height",
-            "image_width",
+            "image_width"
           ]
         },
 		
@@ -148,7 +148,8 @@
           "object_class": {
             "type": "array",
             "items": {
-              "type": "string"
+              "type": "string",
+              "enum": ["bicycle", "cargo_bicycle", "car", "scooter", "moped", "motorcycle", "truck", "van", "freight", "other", "unspecified", "pedestrian"]
               }
             },
 		  
@@ -175,6 +176,10 @@
 		  
           "pedestrian_counting": {
             "type": "integer"
+          },
+
+          "double_parking_status": {
+            "type": "boolean"
           }
         },
         "required": [
@@ -184,7 +189,8 @@
           "object_scores",
           "traffic_counting",
           "bike_counting",
-          "pedestrian_counting"
+          "pedestrian_counting",
+          "double_parking_status"
         ]
       }
     }

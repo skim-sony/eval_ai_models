@@ -1,6 +1,6 @@
 # Descriptions for standardized json output
 
-This readme describes the json output schema that we standardized for AITRIOS AI model. Current json output is mainly for DNN object detection and post-processing for smart city use-case such as traffic counting and curb management.
+This readme describes the json output schema that we standardized for AITRIOS AI model. Current json output schema is mainly for DNN object detection and post-processing for smart city use-case such as traffic counting and curb management.
 - frame_output_schema.json: output schema for frame-based output
 
 ----

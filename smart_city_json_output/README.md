@@ -31,10 +31,10 @@ frame_output_schema.json file consists of two objects: 'config' and 'output'. 'o
 |------------|-----------|-----------|-------------|
 | frame_id  |   Y       | integer    | Unique identifier for the frame |
 | timestamp  |   N       | string    | The timestamp of the frame in ISO 8601 format |
-| object_ids   |   Y       | array of integer   | List of detected objects in the frame |
-| object_bboxes    |   Y       | array     | Bounding box coordinates of the detected object [x1, y1, x2, y2] |
+| object_id   |   Y       | array of integer   | List of detected objects in the frame |
+| object_bbox    |   Y       | array     | Bounding box coordinates of the detected object [x1, y1, x2, y2] |
 | object_class  |   Y       | array of string    | Type of the detected object (supported objects: "pedestrian", "bicycle", "cargo_bicycle", "car", "scooter", "moped", "motorcycle", "truck", "van", "freight", "other", "unspecified")|
-| object_scores       |   Y       | array of number    | Confidence score of the detected object |
+| object_score       |   Y       | array of number    | Confidence score of the detected object |
 | traffic_counting       |   N       | array of integer    | The total number of vehicle that passes the counting boundary |
 | bike_counting |   N       |  array of integer     | The total number of bike that passes the counting boundary |
 | pedestrian_counting |   N       |  array of integer     | The total number of pedestrian that passes the counting boundary |

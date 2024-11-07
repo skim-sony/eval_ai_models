@@ -150,14 +150,14 @@
             "type": "string"
           },
 		  
-          "object_ids": {
+          "object_id": {
             "type": "array",
             "items": {
               "type": "integer"
             }
           },
 		  
-          "object_bboxes": {
+          "object_bbox": {
             "type": "array",
             "items": {
               "type": "array",
@@ -177,7 +177,7 @@
               }
             },
 		  
-          "object_scores": {
+          "object_score": {
             "type": "array",
             "items": {
               "type": "number"
@@ -261,9 +261,10 @@
         },
         "required": [
           "frame_id",
-          "object_bboxes",
+          "object_id",
+          "object_bbox",
           "object_class",
-          "object_scores"
+          "object_score"
         ]
       }
     }

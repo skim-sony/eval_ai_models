@@ -1,13 +1,16 @@
 # Descriptions for standardized json output
 
-This readme describes the json output schema that we standardized for AITRIOS AI model output. Current json output schema is mainly for DNN object detection and post-processing for smart city use-case such as traffic counting and curb management.
+This readme describes the json output schema that we standardized for AITRIOS AI model output. Current json output schema (v1.0.0) is mainly for DNN object detection and post-processing for smart city use-case such as traffic counting and curb management. https://www.jsonschemavalidator.net/ is useful for validating output file with the json schema when developing system.
+
 - frame_output_schema.json: output schema for frame-based output
+- frame_output_sample.json: output sample
 
 ----
 
 ### frame_output_schema.json
+frame_output_schema.json file consists of two objects: 'config' and 'output'. 
 
-#### config
+#### 'config' object
 | Field Name            | Required  | Data Type | Description |
 |-----------------------|-----------|-----------|-------------|
 | source_type           |   Y       | string    | Source type for data |
@@ -23,7 +26,7 @@ This readme describes the json output schema that we standardized for AITRIOS AI
 | pedestrian_counting   |   N       | array of [LineString](https://datatracker.ietf.org/doc/html/rfc7946#appendix-A.2) or [Polygon](https://datatracker.ietf.org/doc/html/rfc7946#appendix-A.3)    | Boundary coordinates for pedestrian counting |
 | parking_zone          |   N       | array of [Polygon](https://datatracker.ietf.org/doc/html/rfc7946#appendix-A.3)     | Parking zone coordinates |
 
-#### output
+#### 'output' object
 | Field Name | Required  | Data Type | Description |
 |------------|-----------|-----------|-------------|
 | frame_id  |   Y       | integer    | Unique identifier for the frame |
@@ -35,16 +38,16 @@ This readme describes the json output schema that we standardized for AITRIOS AI
 | traffic_counting       |   N       | array of integer    | The total number of vehicle that passes the counting boundary |
 | bike_counting |   N       |  array of integer     | The total number of bike that passes the counting boundary |
 | pedestrian_counting |   N       |  array of integer     | The total number of pedestrian that passes the counting boundary |
-| parking_status |   N       | object     | Parking status ([more details](https://github.com/smart-camera-engagement/eval-ai-models/tree/main/smart_city_json_output#more-details-on-parking-status)) |
+| parking_status |   N       | object     | Parking status ([details](https://github.com/smart-camera-engagement/eval-ai-models/tree/main/smart_city_json_output#more-details-on-parking-status)) |
 
-##### More details on parking status
+##### Details on 'parking_status' object
 | Field Name | Required  | Data Type | Description |
 |------------|-----------|-----------|-------------|
 | occupied |   Y       | array of boolean     | Parking status for each parking zone in the current frame (true or false) |
 | parking_dwell_time |   Y       | array of integer     | Parking dwell time for each parking zone (unit is seconds) |
-| double_parking_status |   N       | object    | Double parking status ([more details](https://github.com/smart-camera-engagement/eval-ai-models/tree/main/smart_city_json_output#more-details-on-double-parking-status)) |
+| double_parking_status |   N       | object    | Double parking status ([details](https://github.com/smart-camera-engagement/eval-ai-models/tree/main/smart_city_json_output#more-details-on-double-parking-status)) |
 
-##### More details on double parking status
+##### Details on 'double_parking_status' object
 | Field Name | Required  | Data Type | Description |
 |------------|-----------|-----------|-------------|
 | status |   Y       | boolean     | Double parking status in the current frame (true or false) |

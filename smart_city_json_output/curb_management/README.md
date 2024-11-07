@@ -1,13 +1,22 @@
-# Descriptions for json output schema of curb management use-case
+# Descriptions for JSON output schema of curb management use-case
 
-This readme describes the json output schema for curb management that follows [Curb Data Specification (CDS)](https://github.com/openmobilityfoundation/curb-data-specification/tree/main). Most fields are same with CDS standard, but some details are different. The schema v1.0.0 is mainly for system integration with Umojo for curb management project for San Jose City. This output is an intermediate output between AI model and Leopard Imaging's 
+This README describes the JSON output schema for curb management, which follows the [Curb Data Specification (CDS)](https://github.com/openmobilityfoundation/curb-data-specification/tree/main). The schema version 1.0.0 is primarily intended for system integration with the Umojo CDS server for the City of San Jose. Most fields are the same as those in the CDS, but some details differ. Below are the modifications from the CDS. 
+- event_id: requires integer than UUID (128-bit unique id) which CDS standard uses.
+- vehicle type: "pedestrian" is added.
+- object_id: replaced "vehicle_id" to "object_id". 
+- curb_zone_id, curb_area_id, and curb_space_id are defined as follows :
+![curbs](curbs_definition.png)
+ - curb_area_id: "s_4th_st"
+ - curb_zone_id: "parking_zone_0", "parking_zone_1", "loading_zone_0", "loading_zone_1", "bike_lane_0", "bike_lane_1", "traffic_lane_0", "traffic_lane_1", "sidewalk_0", "sidewalk_1"
+ - curb_space_id: "parking_space_0", "parking_space_1", "parking_space_2", "parking_space_3", "parking_space_4", "parking_space_5", "parking_space_6", "parking_space_7", "parking_space_8", "parking_space_9"
 
+Below is the link to the related files:
 - [curb_event_output_schema.json](https://github.com/smart-camera-engagement/eval-ai-models/blob/main/smart_city_json_output/curb_management/curb_event_output_schema.json): output schema for event-based output
 - [curb_event_output_sample.json](https://github.com/smart-camera-engagement/eval-ai-models/blob/main/smart_city_json_output/curb_management/curb_event_output_sample.json): output sample
 ----
 
 ### curb_event_output_schema.json
-curb_event_output_schema.json file consists of 'events' which is an array of curb event objects.
+The 'curb_event_output_schema.json' file consists of an array of curb event objects called 'events'.
 
 #### 'events' object
 | Field Name            | Required  | Data Type | Description |
@@ -23,7 +32,7 @@ curb_event_output_schema.json file consists of 'events' which is an array of cur
 | curb_space_id      |   Y       | string     | ID of the Curb Space where the event occurred. |
 | object_id         |   Y       | integer  | Id of the vehicle that occurs the event. |
 | vehicle_length   |   N       | integer    | Approximate length of the vehicle that performed the event, in centimeters. Required for sources capable of determining vehicle length.  |
-| vehicle_type   |   Y       | string ([VehicleType](https://github.com/openmobilityfoundation/curb-data-specification/tree/main/events#vehicle-type))   | Type of the vehicle that performed the event.  |
+| vehicle_type   |   Y       | string ([VehicleType](https://github.com/openmobilityfoundation/curb-data-specification/tree/main/events#vehicle-type))   | Type of the vehicle that performed the event. |
 | vehicle_blocked_lane_types          |   N       | array of [LaneType](https://github.com/openmobilityfoundation/curb-data-specification/tree/main/events#lane-type)    | Type(s) of lane blocked by the vehicle performing the event. If no lanes are blocked by the vehicle performing the event, the array should be empty. |
 
 ##### Details on 'event_location' object

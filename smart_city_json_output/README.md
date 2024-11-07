@@ -1,6 +1,6 @@
-# Descriptions for standardized json output schema
+# Descriptions for standardized JSON output schema
 
-This readme describes the json output schema that we standardized for AITRIOS AI model output. Current json output schema (v1.0.0) is mainly for DNN object detection and post-processing for smart city use-case such as traffic counting and curb management. https://www.jsonschemavalidator.net/ is useful for validating output file with the json schema when developing system.
+This README describes the JSON output schema that we standardized for the AITRIOS AI model output. The current JSON output schema (v1.0.0) is primarily intended for DNN object detection and post-processing for smart city use-cases, such as traffic counting and curb management. The website https://www.jsonschemavalidator.net/ is useful for validating output files against the JSON schema during system development.
 
 - [frame_output_schema.json](https://github.com/smart-camera-engagement/eval-ai-models/blob/main/smart_city_json_output/frame_output_schema.json): output schema for frame-based output
 - [frame_output_sample.json](https://github.com/smart-camera-engagement/eval-ai-models/blob/main/smart_city_json_output/frame_output_sample.json): output sample
@@ -8,7 +8,7 @@ This readme describes the json output schema that we standardized for AITRIOS AI
 ----
 
 ### frame_output_schema.json
-frame_output_schema.json file consists of two objects: 'config' and 'output'. 'output' is an array of output object.
+The 'frame_output_schema.json' file consists of two objects: 'config' and 'output'. Tje 'output' is an array of output object.
 
 #### 'config' object
 | Field Name            | Required  | Data Type | Description |

@@ -49,7 +49,7 @@ This readme describes the json output schema that we standardized for AITRIOS AI
 |------------|-----------|-----------|-------------|
 | status |   Y       | boolean     | Double parking status in the current frame (true or false) |
 | double_parking_dwell_time |   N       | integer     | Double parking dwell time in the current frame (unit is seconds) |
-| vehicle_blocked_lane_types |   N       | [LaneType] (https://github.com/openmobilityfoundation/curb-data-specification/tree/main/events#lane-type)    | Type of lane blocked by the vehicle performing the event. |
+| vehicle_blocked_lane_types |   N       | [LaneType](https://github.com/openmobilityfoundation/curb-data-specification/tree/main/events#lane-type)    | Type of lane blocked by the vehicle performing the event. |
 | double_parking_location |   N       | array of Point or Polygon    | Double parking location coordinates |
 
 

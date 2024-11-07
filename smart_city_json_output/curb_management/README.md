@@ -1,9 +1,9 @@
 # Descriptions for JSON output schema of curb management use-case
 
 This README describes the JSON output schema for curb management, which follows the [Curb Data Specification (CDS)](https://github.com/openmobilityfoundation/curb-data-specification/tree/main). The schema version 1.0.0 is primarily intended for system integration with the Umojo CDS server for the City of San Jose. Most fields are the same as those in the CDS, but some details differ. Below are the modifications from the CDS. 
-- event_id: requires integer than UUID (128-bit unique id) which CDS standard uses.
+- event_id: requires an integer rather than a UUID (128-bit unique ID) as used by the CDS standard.
 - vehicle type: "pedestrian" is added.
-- object_id: replaced "vehicle_id" to "object_id". 
+- object_id: replaced "vehicle_id" with "object_id". 
 - curb_zone_id, curb_area_id, and curb_space_id are defined as follows :
 ![curbs](curbs_definition.png)
  - curb_area_id: "s_4th_st"

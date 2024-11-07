@@ -10,8 +10,7 @@
           "type": "string"
         },
 	
-        "camera_name": {
-          "description": "1: camera 1, 2: camera 2",
+        "camera_id": {
           "type": "integer"
         },
 
@@ -134,7 +133,7 @@
             "required": ["type", "coordinates"]
           }
         },
-        "required": ["source_type", "camera_name", "input_tensor_height", "input_tensor_width", "output_tensor_height", "output_tensor_width", "traffic_counting", "bike_counting", "pedestrian_counting"]
+        "required": ["source_type", "camera_id", "input_tensor_height", "input_tensor_width", "output_tensor_height", "output_tensor_width", "traffic_counting", "bike_counting", "pedestrian_counting"]
       },
       
     
@@ -143,8 +142,12 @@
       "items": {
         "type": "object",
         "properties": {
-          "frame_num": {
+          "frame_id": {
             "type": "integer"
+          },
+
+          "timestamp": {
+            "type": "string"
           },
 		  
           "object_ids": {
@@ -257,7 +260,7 @@
           }
         },
         "required": [
-          "frame_num",
+          "frame_id",
           "object_bboxes",
           "object_class",
           "object_scores",

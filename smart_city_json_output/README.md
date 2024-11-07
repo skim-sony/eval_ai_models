@@ -35,14 +35,14 @@ This readme describes the json output schema that we standardized for AITRIOS AI
 | traffic_counting       |   N       | array of integer    | The total number of vehicle that passes the counting boundary |
 | bike_counting |   N       |  array of integer     | The total number of bike that passes the counting boundary |
 | pedestrian_counting |   N       |  array of integer     | The total number of pedestrian that passes the counting boundary |
-| parking_status |   N       | object     | Parking status (more details) |
+| parking_status |   N       | object     | Parking status ([more details](https://github.com/smart-camera-engagement/eval-ai-models/tree/main/smart_city_json_output#more-details-on-parking-status)) |
 
 ##### More details on parking status
 | Field Name | Required  | Data Type | Description |
 |------------|-----------|-----------|-------------|
 | occupied |   Y       | array of boolean     | Parking status for each parking zone in the current frame (true or false) |
 | parking_dwell_time |   Y       | array of integer     | Parking dwell time for each parking zone (unit is seconds) |
-| double_parking_status |   N       | object    | Double parking status (more details) |
+| double_parking_status |   N       | object    | Double parking status ([more details](https://github.com/smart-camera-engagement/eval-ai-models/tree/main/smart_city_json_output#more-details-on-double-parking-status)) |
 
 ##### More details on double parking status
 | Field Name | Required  | Data Type | Description |

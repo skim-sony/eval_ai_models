@@ -1,6 +1,6 @@
 # Descriptions for json output schema of curb management use-case
 
-This readme describes the json output schema for curb management that follows [Curb Data Specification (CDS)](https://github.com/openmobilityfoundation/curb-data-specification/tree/main). The schema v1.0.0 is mainly for system integration with Umojo for curb management project for San Jose City. 
+This readme describes the json output schema for curb management that follows [Curb Data Specification (CDS)](https://github.com/openmobilityfoundation/curb-data-specification/tree/main). Most fields are same with CDS standard, but some details are different. The schema v1.0.0 is mainly for system integration with Umojo for curb management project for San Jose City. 
 
 - [curb_event_output_schema.json](https://github.com/smart-camera-engagement/eval-ai-models/blob/main/smart_city_json_output/curb_management/curb_event_output_schema.json): output schema for event-based output
 - [curb_event_output_sample.json](https://github.com/smart-camera-engagement/eval-ai-models/blob/main/smart_city_json_output/curb_management/curb_event_output_sample.json): output sample
@@ -21,7 +21,8 @@ curb_event_output_schema.json file consists of 'events' which is an array of cur
 | curb_zone_id  |   Y       | string   | ID of the Curb Zone where the event occurred.  |
 | curb_area_ids   |   Y       | array of string   | IDs of the Curb Area where the event occurred. Since Curb Areas can overlap, an event may happen in more than one. |
 | curb_space_id      |   Y       | string     | ID of the Curb Space where the event occurred. |
-| object_id         |   Y       | integer  | Id of the vehicle that occurs the event |
+| object_id         |   Y       | integer  | Id of the vehicle that occurs the event. |
+| vehicle_length   |   N       | integer    | Approximate length of the vehicle that performed the event, in centimeters. Required for sources capable of determining vehicle length.  |
 | vehicle_type   |   Y       | string ([VehicleType](https://github.com/openmobilityfoundation/curb-data-specification/tree/main/events#vehicle-type))   | Type of the vehicle that performed the event.  |
 | vehicle_blocked_lane_types          |   N       | array of [LaneType](https://github.com/openmobilityfoundation/curb-data-specification/tree/main/events#lane-type)    | Type(s) of lane blocked by the vehicle performing the event. If no lanes are blocked by the vehicle performing the event, the array should be empty. |
 

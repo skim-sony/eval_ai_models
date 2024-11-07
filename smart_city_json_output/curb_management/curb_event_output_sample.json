@@ -22,6 +22,7 @@
     "curb_area_ids": ["s_4th_st"],
     "curb_space_id": "parking_space_3",
     "object_id": 0,
+    "vehicle_length": 670,
     "vehicle_type": "truck",
     "vehicle_blocked_lane_types": ["parking"]
   },
@@ -47,6 +48,7 @@
     "curb_area_ids": ["s_4th_st"],
     "curb_space_id": "parking_space_3",
     "object_id": 0,
+    "vehicle_length": 670,
     "vehicle_type": "truck",
     "vehicle_blocked_lane_types": ["parking"]
   }

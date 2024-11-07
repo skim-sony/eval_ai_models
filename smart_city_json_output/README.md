@@ -30,7 +30,7 @@ This readme describes the json output schema that we standardized for AITRIOS AI
 | timestamp  |   N       | string    | The timestamp of the frame in ISO 8601 format |
 | object_ids   |   Y       | array of integer   | List of detected objects in the frame |
 | object_bboxes    |   Y       | array     | Bounding box coordinates of the detected object [x1, y1, x2, y2] |
-| object_class  |   Y       | array of string    | Type of the detected object (e.g., vehicle, pedestrian) |
+| object_class  |   Y       | array of string    | Type of the detected object (supported objects: "pedestrian", "bicycle", "cargo_bicycle", "car", "scooter", "moped", "motorcycle", "truck", "van", "freight", "other", "unspecified")|
 | object_scores       |   Y       | array of number    | Confidence score of the detected object |
 | traffic_counting       |   N       | array of integer    | The total number of vehicle that passes the counting boundary |
 | bike_counting |   N       |  array of integer     | The total number of bike that passes the counting boundary |

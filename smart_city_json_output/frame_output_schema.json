@@ -173,7 +173,7 @@
             "type": "array",
             "items": {
               "type": "string",
-              "enum": ["bicycle", "cargo_bicycle", "car", "scooter", "moped", "motorcycle", "truck", "van", "freight", "other", "unspecified", "pedestrian"]
+              "enum": ["pedestrian", "bicycle", "cargo_bicycle", "car", "scooter", "moped", "motorcycle", "truck", "van", "freight", "other", "unspecified"]
               }
             },
 		  

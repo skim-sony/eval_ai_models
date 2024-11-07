@@ -6,7 +6,6 @@
     "event_purpose": "parcel_delivery",
     "event_location": {
       "type": "Feature",
-      "bbox": [-10.0, -10.0, 10.0, 10.0],
       "properties": { 
         "timestamp": 1552678574581,
         "speed": 1.21
@@ -32,7 +31,6 @@
     "event_purpose": "parcel_delivery",
     "event_location": {
       "type": "Feature",
-      "bbox": [-10.0, -10.0, 10.0, 10.0],
       "properties": { 
         "timestamp": 1552678574581,
         "speed": 1.21

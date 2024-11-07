@@ -36,14 +36,13 @@ The 'curb_event_output_schema.json' file consists of an array of curb event obje
 | vehicle_blocked_lane_types          |   N       | array of [LaneType](https://github.com/openmobilityfoundation/curb-data-specification/tree/main/events#lane-type)    | Type(s) of lane blocked by the vehicle performing the event. If no lanes are blocked by the vehicle performing the event, the array should be empty. |
 
 ##### Details on 'event_location' object
-'event_location' follows GeoJSON standard. 
+The 'event_location' follows GeoJSON standard. 
 | Field Name | Required  | Data Type | Description |
 |------------|-----------|-----------|-------------|
-| type      |   Y       | string     | fds |
-| bbox      |   Y       | array     | fds |
-| timestamp |   Y       | string     | fds |
-| speed     |   Y       | string     | fds |
-| geometry  |   Y       | string     | fds |
+| type      |   Y       | string     | Whenever a vehicle or device location coordinate measurement is presented, it must be represented as a GeoJSON "Feature" object with a corresponding "properties" object. |
+| timestamp |   Y       | string     | Date/time that event occurred. Based on GPS or GNSS clock |
+| speed     |   Y       | string     | Estimated speed in meters / sec as reported by the GPS chipset |
+| geometry  |   Y       | string     | a GeoJSON geometry of type "Point" as defined in [RFC 7946 3.1.6](https://www.ietf.org/rfc/rfc7946.txt).|
 
 ----
 ### Version

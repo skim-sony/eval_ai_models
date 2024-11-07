@@ -29,14 +29,6 @@
                 "type": "string",
                 "enum": ["Feature"]
               },
-              "bbox": {
-                "type": "array",
-                "items": {
-                  "type": "number"
-                },
-                "minItems": 4,
-                "maxItems": 4
-              },
               "properties": {
                 "type": "object",
                 "properties": {
@@ -68,7 +60,7 @@
                 "required": ["type", "coordinates"]
               }
             },
-            "required": ["type", "bbox", "properties", "geometry"]
+            "required": ["type", "properties", "geometry"]
           },
 		  
           "event_time": {

@@ -10,7 +10,7 @@ This readme describes the json output schemas that we standardized for AITRIOS A
 #### config
 | Field Name            | Required  | Data Type | Description |
 |-----------------------|-----------|-----------|-------------|
-| source_type           |   Y       | string    | The timestamp of the frame in ISO 8601 format |
+| source_type           |   Y       | string    | Source type for data |
 | camera_id             |   Y       | integer   | Camera id |
 | video_file_name       |   N       | string    | Video file name; leave as 'null' if it's online processing |
 | total_image_frames    |   N       | integer   | The number of total images for processing; leave as -1 if it's online processing |

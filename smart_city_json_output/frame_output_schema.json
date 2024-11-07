@@ -133,7 +133,7 @@
             "required": ["type", "coordinates"]
           }
         },
-        "required": ["source_type", "camera_id", "input_tensor_height", "input_tensor_width", "output_tensor_height", "output_tensor_width", "traffic_counting", "bike_counting", "pedestrian_counting"]
+        "required": ["source_type", "camera_id", "input_tensor_height", "input_tensor_width", "output_tensor_height", "output_tensor_width"]
       },
       
     
@@ -263,10 +263,7 @@
           "frame_id",
           "object_bboxes",
           "object_class",
-          "object_scores",
-          "traffic_counting",
-          "bike_counting",
-          "pedestrian_counting"
+          "object_scores"
         ]
       }
     }

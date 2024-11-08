@@ -9,7 +9,7 @@ Below is the link to the related files:
 ----
 
 ### frame_output_schema.json
-The 'frame_output_schema.json' file consists of two objects: 'config' and 'output'. Tje 'output' is an array of output object.
+The 'frame_output_schema.json' file consists of two objects: 'config' and 'output'. The 'output' is an array of output object.
 
 #### 'config' object
 | Field Name            | Required  | Data Type | Description |

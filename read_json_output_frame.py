@@ -21,10 +21,11 @@ def read_json_file(file_path):
         data = json.load(file)
     return data
 
-file_path = 'curb_management/json_output_schema/sj_curb_output_sample_frame.json'
-json_data = read_json_file(file_path)
+if __name__ == "__main__":
+    file_path = 'curb_management/json_output_schema/sj_curb_output_sample_frame.json'
+    json_data = read_json_file(file_path)
 
-config = json_data['config']
-output = json_data['output']
+    config = json_data['config']
+    output = json_data['output']
 
-co = Config(config)
+    co = Config(config)

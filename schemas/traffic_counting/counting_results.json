@@ -1,0 +1,34 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "version": "1.0.1",
+  "type": "object",
+  "properties": {
+    
+    "counting_results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          
+          "traffic_counting": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          },
+		  
+          "bike_counting": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          },
+		  
+          "pedestrian_counting": {
+            "type": "integer"
+          }
+        }
+      }
+    }
+  }
+}

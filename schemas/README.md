@@ -62,3 +62,4 @@ The 'frame_output_schema.json' file consists of two objects: 'config' and 'outpu
 |   Version  |   Date    | Description |
 |------------|-----------|-------------|
 | 1.0.0      | 11/6/2024 | First version created for DNN object detection output and smart city use-case |
+| 1.0.1      | 11/6/2024 | Updated the main schema into separate subschemas depending on use-case |

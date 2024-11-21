@@ -14,7 +14,7 @@
 		"bike_counting": [0, 0],
 		"pedestrian_counting": 0
 	  },
-	  "parking_status":{
+	  "parking_results":{
 		"occupied": [true, false, false, false, false],
 		"parking_dwell_time": [5, 0, 0, 0, 0],
 		"double_parking_status": {
@@ -43,7 +43,7 @@
 		"bike_counting": [0, 0],
 		"pedestrian_counting": 0
 	  },
-	  "parking_status":{
+	  "parking_results":{
 		"occupied": [true, false, false, false, false],
 		"parking_dwell_time": [10, 0, 0, 0, 0],
 		"double_parking_status": {

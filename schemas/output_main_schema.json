@@ -12,10 +12,10 @@
         "properties": {
           "frame_id": { "type": "integer" },
           "timestamp": { "type": "string" },
-          "detection_results": { "$ref": "file:///C:/Users/3000095175/Documents/codes/eval-ai-models/schemas/object_detection/detection_results.json" },
-          "counting_results": { "$ref": "file:///C:/Users/3000095175/Documents/codes/eval-ai-models/schemas/traffic_counting/counting_results.json" },
-          "parking_results": { "$ref": "file:///C:/Users/3000095175/Documents/codes/eval-ai-models/schemas/parking_status/parking_results.json" },
-          "curb_mgmt_results": { "$ref": "file:///C:/Users/3000095175/Documents/codes/eval-ai-models/schemas/curb_management/curb_event_results.json" }
+          "detection_results": { "$ref": "schemas/object_detection/detection_results.json" },
+          "counting_results": { "$ref": "schemas/traffic_counting/counting_results.json" },
+          "parking_results": { "$ref": "schemas/parking_status/parking_results.json" },
+          "curb_mgmt_results": { "$ref": "schemas/curb_management/curb_event_results.json" }
         }
       }
     }

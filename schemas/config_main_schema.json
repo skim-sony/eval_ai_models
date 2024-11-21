@@ -8,9 +8,9 @@
       "$comment": "'app_config' is to log configurations and settings of AI model and algorithm.",
       "type": "object",
       "properties": {
-        "general_config": { "$ref": "file:///C:/Users/3000095175/Documents/codes/eval-ai-models/schemas/general_config.json" },
-        "counting_config": { "$ref": "file:///C:/Users/3000095175/Documents/codes/eval-ai-models/schemas/traffic_counting/config.json" },
-        "parking_config": { "$ref": "file:///C:/Users/3000095175/Documents/codes/eval-ai-models/schemas/parking_status/config.json" }
+        "general_config": { "$ref": "schemas/general_config.json" },
+        "counting_config": { "$ref": "schemas/traffic_counting/config.json" },
+        "parking_config": { "$ref": "schemas/parking_status/config.json" }
       },
       "required": [
         "general_config"

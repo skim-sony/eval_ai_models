@@ -3,70 +3,59 @@
   "version": "1.0.1",
   "type": "object",
   "properties": {
-    
-    "parking_status": {
+
+    "occupied": {
       "type": "array",
       "items": {
-        "type": "object",
-        "properties": {
-          "parking_status": {
-            "type": "object",
-            "properties": {
-              "occupied": {
-                "type": "array",
-                "items": {
-                  "type": "boolean"
-                }
-              },
-              "parking_dwell_time": {
-                "type": "array",
-                "items": {
-                  "description": "unit is seconds",
-                  "type": "integer"
-                }
-              },
-              "double_parking_status": {
-                "type": "object",
-                "properties": {
-                  "status": {
-                    "type": "boolean"
-                  },
-                  "double_parking_dwell_time": {
-                    "description": "unit is seconds",
-                    "type": "integer"
-                  },
-                  "vehicle_blocked_lane_types":{
-                    "type": "string"
-                  },
-                  "double_parking_location": {
-                    "type": "object",
-                    "properties": {
-                      "type": {
-                        "type": "string",
-                        "enum": ["Point", "Polygon"]
-                      },
-                      "coordinates": {
-                        "type": "array",
-                        "items": {
-                          "type": "array",
-                          "items": {
-                            "type": "number"
-                          },
-                          "minItems": 2,
-                          "maxItems": 2
-                        }
-                      }
-                    },
-                    "required": ["type", "coordinates"]
-                  }
-                },
-                "required": ["status"]
-              }
-            },
-          "required": ["occupied", "parking_dwell_time"]
-          }
-        }
+        "type": "boolean"
       }
+    },
+    
+    "parking_dwell_time": {
+      "type": "array",
+      "items": {
+        "description": "unit is seconds",
+        "type": "integer"
+      }
+    },
+    
+    "double_parking_status": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "boolean"
+        },
+        "double_parking_dwell_time": {
+          "description": "unit is seconds",
+          "type": "integer"
+        },
+        "vehicle_blocked_lane_types":{
+          "type": "string"
+        },
+        "double_parking_location": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": ["Point", "Polygon"]
+            },
+            "coordinates": {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                },
+                "minItems": 2,
+                "maxItems": 2
+              }
+            }
+          },
+          "required": ["type", "coordinates"]
+        }
+      },
+      "required": ["status"]
     }
-  }
+  },
+  "required": ["occupied", "parking_dwell_time"]
 }

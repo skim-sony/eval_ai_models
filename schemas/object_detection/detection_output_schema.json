@@ -3,6 +3,7 @@
   "version": "1.0.1",
   "type": "object",
   "properties": {
+    
     "object_id": {
       "type": "array",
       "items": {

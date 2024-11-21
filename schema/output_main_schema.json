@@ -13,10 +13,10 @@
         "properties": {
           "frame_id": { "type": "integer" },
           "timestamp": { "type": "string" },
-          "detection_results": { "$ref": "schemas/object_detection/detection_output_schema.json" },
-          "counting_results": { "$ref": "schemas/traffic_counting/counting_output_schema.json" },
-          "parking_results": { "$ref": "schemas/parking_status/parking_output_schema.json" },
-          "curb_mgmt_results": { "$ref": "schemas/curb_management/curb_output_schema.json" }
+          "detection_results": { "$ref": "schema/object_detection/detection_output_schema.json" },
+          "counting_results": { "$ref": "schema/traffic_counting/counting_output_schema.json" },
+          "parking_results": { "$ref": "schema/parking_status/parking_output_schema.json" },
+          "curb_mgmt_results": { "$ref": "schema/curb_management/curb_output_schema.json" }
         }
       }
     }

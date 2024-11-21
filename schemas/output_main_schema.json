@@ -5,7 +5,7 @@
   "type": "object",
   "properties": {  
     "outputs": {
-      "$comment": "'output' is an array of frame-based outputs.",
+      "$comment": "'output' is an array of frame-based or event outputs.",
       "type": "array",
       "items": {
         "type": "object",

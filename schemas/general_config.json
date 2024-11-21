@@ -3,33 +3,34 @@
   "version": "1.0.1",
   "type": "object",
   "properties": {
-    "general_config": {
-      "type": "object",
-      "properties": {
-        "source_type": {
-          "type": "string"
-        },
-	
-        "camera_id": {
-          "type": "integer"
-        },
+    "source_type": {
+      "type": "string"
+    },
 
-        "video_file_name": {
-          "$comment": "Leave as 'null' if it's online processing",
-          "type": "string"
-        },
-        
-        "total_image_frames": {
-          "$comment": "Leave as -1 if it's online processing",
-          "type": "integer"
-        },
-
-        "input_tensor_height": {"type": "integer"},
-        "input_tensor_width": {"type": "integer"},
-        "output_tensor_height": {"type": "integer"},
-        "output_tensor_width": {"type": "integer"}
-      },
-        "required": ["source_type", "camera_id", "input_tensor_height", "input_tensor_width", "output_tensor_height", "output_tensor_width"]
-      }
-    }
+    "camera_id": {
+      "type": "integer"
+    },
+    
+    "video_file_name": {
+      "$comment": "Leave as 'null' if it's online processing",
+      "type": "string"
+    },
+    
+    "total_image_frames": {
+      "$comment": "Leave as -1 if it's online processing",
+      "type": "integer"
+    },
+    
+    "input_tensor_height": {"type": "integer"},
+    "input_tensor_width": {"type": "integer"},
+    "output_tensor_height": {"type": "integer"},
+    "output_tensor_width": {"type": "integer"}
+  },
+  "required": [
+    "source_type", 
+    "camera_id", 
+    "input_tensor_height", 
+    "input_tensor_width", 
+    "output_tensor_height", 
+    "output_tensor_width"]
 }

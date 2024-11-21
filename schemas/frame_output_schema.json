@@ -1,0 +1,273 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "version": "1.0.0",
+  "type": "object",
+  "properties": {
+    "config": {
+      "type": "object",
+      "properties": {
+        "source_type": {
+          "type": "string"
+        },
+	
+        "camera_id": {
+          "type": "integer"
+        },
+
+        "video_file_name": {
+          "$comment": "Leave as 'null' if it's online processing",
+          "type": "string"
+        },
+        
+        "total_image_frames": {
+          "$comment": "Leave as -1 if it's online processing",
+          "type": "integer"
+        },
+
+        "input_tensor_height": {"type": "integer"},
+        "input_tensor_width": {"type": "integer"},
+        "output_tensor_height": {"type": "integer"},
+        "output_tensor_width": {"type": "integer"},
+
+        "traffic_counting": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": ["LineString", "MultiLineString", "Polygon"]
+            },
+            "coordinates": {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  },
+                  "minItems": 2,
+                  "maxItems": 2
+                }
+              },
+              "minItems": 1
+            }
+          },
+          "required": ["type", "coordinates"]
+        },
+		
+        "bike_counting": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": ["LineString", "Polygon"]
+            },
+            "coordinates": {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  },
+                  "minItems": 2,
+                  "maxItems": 2
+                }
+              },
+              "minItems": 1
+            }
+          },
+          "required": ["type", "coordinates"]
+        },
+		
+        "pedestrian_counting": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": ["LineString", "Polygon"]
+            },
+            "coordinates": {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                    },
+                    "minItems": 2,
+                    "maxItems": 2
+                  }
+                },
+                "minItems": 1
+              }
+            },
+            "required": ["type", "coordinates"]
+          },
+
+        "parking_zone": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": ["Polygon"]
+            },
+            "coordinates": {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                    },
+                    "minItems": 2,
+                    "maxItems": 2
+                  }
+                },
+                "minItems": 1
+              }
+            },
+            "required": ["type", "coordinates"]
+          }
+        },
+        "required": ["source_type", "camera_id", "input_tensor_height", "input_tensor_width", "output_tensor_height", "output_tensor_width"]
+      },
+      
+    
+    "output": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "frame_id": {
+            "type": "integer"
+          },
+
+          "timestamp": {
+            "type": "string"
+          },
+		  
+          "object_id": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          },
+		  
+          "object_bbox": {
+            "type": "array",
+            "items": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              },
+            "minItems": 4,
+            "maxItems": 4
+            }
+          },
+		  
+          "object_class": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["pedestrian", "bicycle", "cargo_bicycle", "car", "scooter", "moped", "motorcycle", "truck", "van", "freight", "other", "unspecified"]
+              }
+            },
+		  
+          "object_score": {
+            "type": "array",
+            "items": {
+              "type": "number"
+              }
+            },
+		  
+          "traffic_counting": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          },
+		  
+          "bike_counting": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          },
+		  
+          "pedestrian_counting": {
+            "type": "integer"
+          },
+
+          "parking_status": {
+            "type": "object",
+            "properties": {
+              "occupied": {
+                "type": "array",
+                "items": {
+                  "type": "boolean"
+                }
+              },
+              "parking_dwell_time": {
+                "type": "array",
+                "items": {
+                  "description": "unit is seconds",
+                  "type": "integer"
+                }
+              },
+              "double_parking_status": {
+                "type": "object",
+                "properties": {
+                  "status": {
+                    "type": "boolean"
+                  },
+                  "double_parking_dwell_time": {
+                    "description": "unit is seconds",
+                    "type": "integer"
+                  },
+                  "vehicle_blocked_lane_types":{
+                    "type": "string"
+                  },
+                  "double_parking_location": {
+                    "type": "object",
+                    "properties": {
+                      "type": {
+                        "type": "string",
+                        "enum": ["Point", "Polygon"]
+                      },
+                      "coordinates": {
+                        "type": "array",
+                        "items": {
+                          "type": "array",
+                          "items": {
+                            "type": "number"
+                          },
+                          "minItems": 2,
+                          "maxItems": 2
+                        }
+                      }
+                    },
+                    "required": ["type", "coordinates"]
+                  }
+                },
+                "required": ["status"]
+              }
+            },
+          "required": ["occupied", "parking_dwell_time"]
+          }
+        },
+        "required": [
+          "frame_id",
+          "object_id",
+          "object_bbox",
+          "object_class",
+          "object_score"
+        ]
+      }
+    }
+  },
+  "required": ["config", "output"]
+}

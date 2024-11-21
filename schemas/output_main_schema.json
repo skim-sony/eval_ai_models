@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Main schema for output",
+  "version": "1.0.1",
+  "type": "object",
+  "properties": {  
+    "outputs": {
+      "$comment": "'output' is an array of frame-based outputs.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "frame_id": { "type": "integer" },
+          "timestamp": { "type": "string" },
+          "detection_results": { "$ref": "file:///C:/Users/3000095175/Documents/codes/eval-ai-models/schemas/object_detection/detection_results.json" },
+          "counting_results": { "$ref": "file:///C:/Users/3000095175/Documents/codes/eval-ai-models/schemas/traffic_counting/counting_results.json" },
+          "parking_results": { "$ref": "file:///C:/Users/3000095175/Documents/codes/eval-ai-models/schemas/parking_status/parking_results.json" },
+          "curb_mgmt_results": { "$ref": "file:///C:/Users/3000095175/Documents/codes/eval-ai-models/schemas/curb_management/curb_event_results.json" }
+        }
+      }
+    }
+  },
+  "required": [
+    "outputs"]
+}

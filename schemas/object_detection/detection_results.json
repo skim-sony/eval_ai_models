@@ -3,54 +3,44 @@
   "version": "1.0.1",
   "type": "object",
   "properties": {
-    
-    "detection_results": {
+    "object_id": {
       "type": "array",
       "items": {
-        "type": "object",
-        "properties": {
-          "object_id": {
-            "type": "array",
-            "items": {
-              "type": "integer"
-            }
-          },
-		  
-          "object_bbox": {
-            "type": "array",
-            "items": {
-              "type": "array",
-              "items": {
-                "type": "number"
-              },
-            "minItems": 4,
-            "maxItems": 4
-            }
-          },
-		  
-          "object_class": {
-            "type": "array",
-            "items": {
-              "type": "string",
-              "enum": ["pedestrian", "bicycle", "cargo_bicycle", "car", "scooter", "moped", "motorcycle", "truck", "van", "freight", "other", "unspecified"]
-              }
-            },
-		  
-          "object_score": {
-            "type": "array",
-            "items": {
-              "type": "number"
-              }
-            }
+        "type": "integer"
+      }
+    },
+    
+    "object_bbox": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "number"
         },
-        "required": [
-          "frame_id",
-          "object_id",
-          "object_bbox",
-          "object_class",
-          "object_score"
-        ]
+        "minItems": 4,
+        "maxItems": 4
+      }
+    },
+    
+    "object_class": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["pedestrian", "bicycle", "cargo_bicycle", "car", "scooter", "moped", "motorcycle", "truck", "van", "freight", "other", "unspecified"]
+      }
+    },
+    
+    "object_score": {
+      "type": "array",
+      "items": {
+        "type": "number"
       }
     }
-  }
+  },
+  "required": [
+    "object_id",
+    "object_bbox",
+    "object_class",
+    "object_score"
+  ]
 }

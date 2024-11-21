@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Main schema for configurations",
+  "version": "1.0.1",
+  "type": "object",
+  "properties": {
+    "app_config": { 
+      "$comment": "'app_config' is to log configurations and settings of AI model and algorithm.",
+      "type": "object",
+      "properties": {
+        "general_config": { "$ref": "file:///C:/Users/3000095175/Documents/codes/eval-ai-models/schemas/general_config.json" },
+        "counting_config": { "$ref": "file:///C:/Users/3000095175/Documents/codes/eval-ai-models/schemas/traffic_counting/config.json" },
+        "parking_config": { "$ref": "file:///C:/Users/3000095175/Documents/codes/eval-ai-models/schemas/parking_status/config.json" }
+      },
+      "required": [
+        "general_config"
+      ]
+    }
+  },
+  "required": [
+    "app_config"
+  ]
+}

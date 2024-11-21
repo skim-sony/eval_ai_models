@@ -10,8 +10,8 @@ def read_json_file(file_path):
 if __name__ == "__main__":
 
     base_path = os.path.dirname(os.path.abspath(__file__))
-    schema_path = os.path.join(base_path, 'schemas/output_main_schema.json')
-    sample_path = os.path.join(base_path, 'schemas/output_sample.json')
+    schema_path = os.path.join(base_path, 'schemas/config_main_schema.json')
+    sample_path = os.path.join(base_path, 'schema_sample/config_sample.json')
 
     main_schema = read_json_file(schema_path)
     sample = read_json_file(sample_path)

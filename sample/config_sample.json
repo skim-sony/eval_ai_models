@@ -5,7 +5,7 @@
 		"source_type": "camera",
 		"camera_id": 1,
 		"video_file_name": "null",
-		"total_image_frames": 100,
+		"total_image_frames": -1,
 		"input_tensor_height": 480,
 		"input_tensor_width": 640,
 		"output_tensor_height": 480,

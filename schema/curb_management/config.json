@@ -1,0 +1,95 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "aitrios:app:config:curb",
+  "version": "1.0.1",
+  "type": "object",
+  "properties": {
+    
+    "zone": {
+      "$comment": "Zone configuration for curb management",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "curb_zone_id": {
+            "type": "string",
+            "enum": ["parking_zone_0", "parking_zone_1", "loading_zone_0", "loading_zone_1", "bike_lane_0", "bike_lane_1", "traffic_lane_0", "traffic_lane_1", "sidewalk_0", "sidewalk_1"]
+          },
+          "geometry": {
+            "type": "object",
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": ["Polygon"]
+              },
+              "coordinates": {
+                "type": "array",
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": "array",
+                    "items": {
+                      "type": "number"
+                    },
+                    "minItems": 2,
+                    "maxItems": 2
+                  }
+                },
+                "minItems": 1,
+                "maxItems": 1
+              }
+            },
+            "required": ["type", "coordinates"],
+            "additionalProperties": false
+          }
+        },
+        "required": ["curb_zone_id", "geometry"],
+        "additionalProperties": false
+      }
+    },
+
+    "space": {
+      "$comment": "Space configuration for curb management",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "curb_space_id": {
+            "type": "string",
+            "enum": ["parking_space_0", "parking_space_1", "parking_space_2", "parking_space_3", "parking_space_4", "parking_space_5", "parking_space_6", "parking_space_7", "parking_space_8", "parking_space_9"]
+          },
+          "geometry": {
+            "type": "object",
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": ["Polygon"]
+              },
+              "coordinates": {
+                "type": "array",
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": "array",
+                    "items": {
+                      "type": "number"
+                    },
+                    "minItems": 2,
+                    "maxItems": 2
+                  }
+                },
+                "minItems": 1,
+                "maxItems": 1
+              }
+            },
+            "required": ["type", "coordinates"],
+            "additionalProperties": false
+          }
+        },
+        "required": ["curb_space_id", "geometry"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

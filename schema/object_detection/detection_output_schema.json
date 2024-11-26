@@ -44,5 +44,6 @@
     "object_bbox",
     "object_class",
     "object_score"
-  ]
+  ],
+  "additionalProperties": false
 }

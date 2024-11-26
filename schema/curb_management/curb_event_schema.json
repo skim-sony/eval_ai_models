@@ -68,21 +68,18 @@
     },
 		  
     "curb_zone_id": {
-      "type": "string",
-      "enum": ["parking_zone_0", "parking_zone_1", "loading_zone_0", "loading_zone_1", "bike_lane_0", "bike_lane_1", "traffic_lane_0", "traffic_lane_1", "sidewalk_0", "sidewalk_1"]
+      "type": "string"
     },
 		  
     "curb_area_ids": {
       "type": "array",
       "items": {
-        "type": "string",
-        "enum": ["s_4th_st"]
+        "type": "string"
       }
     },
 		  
     "curb_space_id": {
-      "type": "string",
-      "enum": ["parking_space_0", "parking_space_1", "parking_space_2", "parking_space_3", "parking_space_4", "parking_space_5", "parking_space_6", "parking_space_7", "parking_space_8", "parking_space_9"]
+      "type": "string"
     },
 		  
     "object_id": {
@@ -118,5 +115,6 @@
     "curb_space_id",
     "object_id",
     "vehicle_type"
-  ]
+  ],
+  "additionalProperties": false
 }

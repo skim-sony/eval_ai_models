@@ -5,82 +5,48 @@
   "type": "object",
   "properties": {
 
-    "traffic_counting": {
-      "type": "object",
-      "properties": {
-        "type": {
-          "type": "string",
-          "enum": ["LineString", "MultiLineString", "Polygon"]
-        },
-        "coordinates": {
-          "type": "array",
-          "items": {
-            "type": "array",
-            "items": {
-              "type": "array",
-              "items": {
-                "type": "number"
-              },
-              "minItems": 2,
-              "maxItems": 2
-            }
+    "counting_boundary": {
+      "$comment": "Boundary configuration for traffic counting",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "boundary_id": {
+            "type": "string",
+            "enum": ["traffic_boundary_nb", "traffic_boundary_sb","bike_boundary_nb", "bike_boundary_sb","pedestrian_boundary_nb", "pedestrian_boundary_sb"]
           },
-          "minItems": 1
-        }
-      },
-      "required": ["type", "coordinates"]
-    },
-
-    "bike_counting": {
-      "type": "object",
-      "properties": {
-        "type": {
-          "type": "string",
-          "enum": ["LineString", "Polygon"]
-        },
-        "coordinates": {
-          "type": "array",
-          "items": {
-            "type": "array",
-            "items": {
-              "type": "array",
-              "items": {
-                "type": "number"
+          "geometry": {
+            "type": "object",
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": ["LineString", "Polygon"]
               },
-              "minItems": 2,
-              "maxItems": 2
-            }
-          },
-          "minItems": 1
-        }
-      },
-      "required": ["type", "coordinates"]
-    },
-
-    "pedestrian_counting": {
-      "type": "object",
-      "properties": {
-        "type": {
-          "type": "string",
-          "enum": ["LineString", "Polygon"]
+              "coordinates": {
+                "type": "array",
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": "array",
+                    "items": {
+                      "type": "number"
+                    },
+                    "minItems": 2,
+                    "maxItems": 2
+                  }
+                },
+                "minItems": 1,
+                "maxItems": 1
+              }
+            },
+            "required": ["type", "coordinates"],
+            "additionalProperties": false
+          }
         },
-        "coordinates": {
-          "type": "array",
-          "items": {
-            "type": "array",
-            "items": {
-              "type": "array",
-              "items": {
-                "type": "number"
-              },
-              "minItems": 2,
-              "maxItems": 2
-            }
-          },
-          "minItems": 1
-        }
-      },
-      "required": ["type", "coordinates"]
+        "required": ["boundary_id", "geometry"],
+        "additionalProperties": false
+      }
     }
-  }
+  },
+  "additionalProperties": false
 }

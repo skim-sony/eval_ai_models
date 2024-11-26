@@ -33,5 +33,6 @@
     "input_tensor_height", 
     "input_tensor_width", 
     "output_tensor_height", 
-    "output_tensor_width"]
+    "output_tensor_width"],
+  "additionalProperties": false
 }

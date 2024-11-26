@@ -5,22 +5,23 @@
   "type": "object",
   "properties": {
        
-    "traffic_counting": {
+    "traffic_count": {
       "type": "array",
       "items": {
         "type": "integer"
       }
     },
 		  
-    "bike_counting": {
+    "bike_count": {
       "type": "array",
       "items": {
         "type": "integer"
       }
     },
 		  
-    "pedestrian_counting": {
+    "pedestrian_count": {
       "type": "integer"
     }
-  }
+  },
+  "additionalProperties": false
 }

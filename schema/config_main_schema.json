@@ -11,7 +11,7 @@
       "properties": {
         "general_config": { "$ref": "schema/general_config.json" },
         "counting_config": { "$ref": "schema/traffic_counting/config.json" },
-        "parking_config": { "$ref": "schema/parking_status/config.json" }
+        "curb_config": { "$ref": "schema/curb_management/config.json" }
       },
       "required": [
         "general_config"
@@ -20,5 +20,6 @@
   },
   "required": [
     "app_config"
-  ]
+  ],
+  "additionalProperties": false
 }

@@ -10,7 +10,7 @@
     
     "event_type": {
       "type": "string",
-      "enum": ["comms_lost", "comms_restored", "decommissioned", "park_start", "park_end", "scheduled_report", "enter_area", "exit_area"]
+      "enum": ["comms_lost", "comms_restored", "decommissioned", "park_start", "park_end", "scheduled_report", "enter_area", "exit_area", "pass_counting_boundary"]
     },
     
     "event_purpose": {

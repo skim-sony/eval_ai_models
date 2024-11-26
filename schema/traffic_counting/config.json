@@ -5,6 +5,18 @@
   "type": "object",
   "properties": {
 
+    "counting_type": {
+      "type": "string",
+      "enum": ["total", "peak", "average"],
+      "description": "Type of count measurement"
+    },
+
+    "counting_frequency": {
+      "type": "integer",
+      "enum": [1,5,15],
+      "description": "Freqyency of count measurement in minutes"
+    },
+
     "counting_boundary": {
       "$comment": "Boundary configuration for traffic counting",
       "type": "array",

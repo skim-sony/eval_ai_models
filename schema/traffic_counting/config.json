@@ -12,8 +12,7 @@
         "type": "object",
         "properties": {
           "boundary_id": {
-            "type": "string",
-            "enum": ["traffic_boundary_nb", "traffic_boundary_sb","bike_boundary_nb", "bike_boundary_sb","pedestrian_boundary_nb", "pedestrian_boundary_sb"]
+            "type": "string"
           },
           "geometry": {
             "type": "object",

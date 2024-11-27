@@ -1,6 +1,6 @@
 # Descriptions for JSON output schema of curb management use-case
 
-This README describes the JSON output schema for curb management, which follows the [Curb Data Specification (CDS)](https://github.com/openmobilityfoundation/curb-data-specification/tree/main). The schema version 1.0.0 is primarily intended for system integration with the Umojo CDS server for the City of San Jose. Most fields are the same as those in the CDS, but some details differ. Below are the modifications from the CDS. 
+This README describes the JSON output schema for curb management, which follows the [Curb Data Specification (CDS)](https://github.com/openmobilityfoundation/curb-data-specification/tree/main). The schema version 1.0.1 is primarily intended for system integration with the Umojo CDS server for the City of San Jose. Most fields are the same as those in the CDS, but some details differ. Below are the modifications from the CDS. 
 - event_id: requires an integer rather than a UUID (128-bit unique ID) as used by the CDS.
 - vehicle type: "pedestrian" is added.
 - object_id: replaced "vehicle_id" with "object_id". 
@@ -11,8 +11,8 @@ This README describes the JSON output schema for curb management, which follows 
  - curb_space_id: "parking_space_0", "parking_space_1", "parking_space_2", "parking_space_3", "parking_space_4", "parking_space_5", "parking_space_6", "parking_space_7", "parking_space_8", "parking_space_9"
 
 Below is the link to the related files:
-- [curb_event_output_schema.json](https://github.com/smart-camera-engagement/eval-ai-models/blob/main/smart_city_json_output/curb_management/curb_event_output_schema.json): output schema for event-based output
-- [curb_event_output_sample.json](https://github.com/smart-camera-engagement/eval-ai-models/blob/main/smart_city_json_output/curb_management/curb_event_output_sample.json): output sample
+- [curb_event_output_schema.json](https://github.com/smart-camera-engagement/eval-ai-models/blob/v1.0.1/schema/curb_management/curb_event_schema.json): output schema for event-based output
+- [curb_event_output_sample.json](https://github.com/smart-camera-engagement/eval-ai-models/blob/v1.0.1/sample/curb_event_output_sample.json): output sample
 ----
 
 ### curb_event_output_schema.json
@@ -22,7 +22,7 @@ The 'curb_event_output_schema.json' file consists of an array of curb event obje
 | Field Name            | Required  | Data Type | Description |
 |-----------------------|-----------|-----------|-------------|
 | event_id           |   Y       | integer    | Unique identifier of the event that occurred. |
-| event_type         |   Y       | string ([EventType](https://github.com/openmobilityfoundation/curb-data-specification/tree/main/events#event-type))   | The event_type that happened for this event. |
+| event_type         |   Y       | string ([EventType](https://github.com/openmobilityfoundation/curb-data-specification/tree/main/events#event-type))   | The event_type that happened for this event. ("pass_counting_boundary" is added for traffic counting event.) |
 | event_purpose      |   Y       | string ([EventPurpose](https://github.com/openmobilityfoundation/curb-data-specification/tree/main/events#event-purpose))   | General curb usage purpose that the vehicle performed during the event. Required for sources capable of determining activity type for relevant event_types. |
 | event_location     |   Y       | object   | The geographic point location where the event occurred. ([details](https://github.com/smart-camera-engagement/eval-ai-models/tree/main/smart_city_json_output/curb_management#details-on-event_location-object)) |
 | event_time         |   Y       | string ([Timestamp](https://github.com/openmobilityfoundation/curb-data-specification/blob/main/general-information.md#timestamp))  | Time at which the event occurred. |
@@ -49,3 +49,4 @@ The 'event_location' follows GeoJSON standard.
 |   Version  |   Date    | Description |
 |------------|-----------|-------------|
 | 1.0.0      | 11/6/2024 | First version created for SJ curb management |
+| 1.0.1      | 11/15/2024 | Updated the main schema into separate subschemas depending on use-case |

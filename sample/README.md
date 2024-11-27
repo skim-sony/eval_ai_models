@@ -2,7 +2,7 @@
 
 This README describes the JSON sample files that we standardized for the AITRIOS AI model output. There are three sample files: config_sample.json, curb_event_output_sample.json, and frame_output_sample.json.
 
-Below is the link to the main schema files:
+Below is the link to the files:
 - [config_sample.json](https://github.com/smart-camera-engagement/eval-ai-models/blob/v1.0.1/sample/config_sample.json): JSON example for configurations of AI model and algorithm.
 - [curb_event_output_sample.json](https://github.com/smart-camera-engagement/eval-ai-models/blob/v1.0.1/sample/curb_event_output_sample.json): JSON example for event-based output that will be used for the system integration of curb management solutions, including traffic counting. For example, if a vehicle passes a counting boundary, this should be recorded here as a new event. 
 - [frame_output_sample.json](https://github.com/smart-camera-engagement/eval-ai-models/blob/v1.0.1/sample/frame_output_sample.json): JSON example for frame-based output (mainly for algorithm evaluation). The traffic counting results in this file represent the total count accumulated from frame 0 to frame N.

@@ -37,7 +37,8 @@ The 'config_main_schema.json' file consists of several subschemas: 'general_conf
 | space   |   Y       | array   | Space configuration for curb management (supported curb_space_id: "parking_space_0", "parking_space_1", "parking_space_2", "parking_space_3", "parking_space_4", "parking_space_5", "parking_space_6", "parking_space_7", "parking_space_8", "parking_space_9") |
 
 ### output_main_schema.json
-The 'output_main_schema.json' file can be used for both frame-based output and event-based output. Frame-based output is primarily for evaluation purposes, while event-based output is intended for system integration with the dashboard. The main schema consists of several subschemas: 'detection_results', 'counting_results', 'parking_results' and 'curb_management_results'.
+The 'output_main_schema.json' file can be used for both frame-based output and event-based output. Frame-based output is primarily for evaluation purposes, while event-based output is intended for system integration with the dashboard. The main schema consists of several subschemas: 'detection_results', 'counting_results', 'parking_results' and 'curb_management_results'. The descriptions for 'counting_results' and 'parking_results' are omitted in this document. Please take a look at a sample output file '[frame_output_sample.json](https://github.com/smart-camera-engagement/eval-ai-models/blob/v1.0.1/sample/frame_output_sample.json).'
+
 | Field Name | Required  | Data Type | Description |
 |------------|-----------|-----------|-------------|
 | frame_id  |   Y       | integer    | Unique identifier for the frame |
@@ -50,7 +51,6 @@ The 'output_main_schema.json' file can be used for both frame-based output and e
 | object_bbox    |   Y       | array     | Bounding box coordinates of the detected object [x1, y1, x2, y2] |
 | object_class  |   Y       | array of string    | Type of the detected object (supported objects: "pedestrian", "bicycle", "cargo_bicycle", "car", "scooter", "moped", "motorcycle", "truck", "van", "freight", "other", "unspecified")|
 | object_score       |   Y       | array of number    | Confidence score of the detected object |
-
 
 ----
 ### Version

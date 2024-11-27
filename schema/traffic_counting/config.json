@@ -67,5 +67,6 @@
       }
     }
   },
+  "required": ["counting_type", "counting_frequency", "counting_boundary"],
   "additionalProperties": false
 }

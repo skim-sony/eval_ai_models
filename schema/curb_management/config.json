@@ -91,5 +91,6 @@
       }
     }
   },
+  "required": ["zone", "space"],
   "additionalProperties": false
 }

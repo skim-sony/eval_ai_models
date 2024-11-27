@@ -3,20 +3,36 @@
   "$id": "aitrios:app:output:counting",
   "version": "1.0.1",
   "type": "object",
-  "properties": {
-    "boundary_id": {
-      "type": "string",
-      "description": "Boundary ID for traffic counting"
-    },
-    "vehicleType": {
-      "type": "string",
-      "enum": ["bicycle", "cargo_bicycle", "car", "scooter", "moped", "motorcycle", "truck", "van", "freight", "other", "unspecified", "pedestrian"],
-      "description": "Vehicle type for counting"
-    },
-    "vehicleCount": {
+  "description": "Counts of vehicles and pedestrians at various boundaries",
+  "additionalProperties": {
+    "type": "object",
+    "description": "Boundary ID for traffic counting",
+
+    "additionalProperties": {
       "type": "integer",
-      "description": "Total number of vehicles counted"
+      "description": "Count of the specified vehicle type"
+    },
+    "properties": {
+      "car": {
+        "type": "integer",
+        "description": "Count of cars"
+      },
+      "truck": {
+        "type": "integer",
+        "description": "Count of trucks"
+      },
+      "bicycle": {
+        "type": "integer",
+        "description": "Count of bicycles"
+      },
+      "motorcycle": {
+        "type": "integer",
+        "description": "Count of motorcycles"
+      },
+      "pedestrian": {
+        "type": "integer",
+        "description": "Count of pedestrians"
+      }
     }
-  },
-  "additionalProperties": false
+  }
 }

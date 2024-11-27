@@ -12,9 +12,17 @@
     },
 
     "counting_frequency": {
-      "type": "integer",
-      "enum": [1,5,15],
-      "description": "Freqyency of count measurement in minutes"
+      "description": "Freqyency of count measurement in minutes",
+      "type": "object",
+      "properties": {
+        "unit": {
+          "type": "string",
+          "enum": ["frame", "second", "minute"]
+        },
+        "frquency": {
+          "type": "integer"
+        }
+      }
     },
 
     "counting_boundary": {

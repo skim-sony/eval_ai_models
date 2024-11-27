@@ -12,7 +12,10 @@
 
 	"counting_config":{
 		"counting_type": "total",
-		"counting_frequency": 1,
+		"counting_frequency": {
+			"unit": "frame",
+			"frquency": 1
+		},
 		"counting_boundary":[
 			{
 				"boundary_id": "traffic_boundary_nb",

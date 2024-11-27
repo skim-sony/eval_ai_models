@@ -12,7 +12,7 @@
     },
 
     "counting_frequency": {
-      "description": "Frequency of count measurement in minutes",
+      "description": "Frequency of count measurement",
       "type": "object",
       "properties": {
         "unit": {

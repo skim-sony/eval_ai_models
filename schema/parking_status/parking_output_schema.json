@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://example.com/schema/parking/output",
+  "$id": "aitrios:app:output:parking",
   "version": "1.0.1",
   "type": "object",
   "description": "Results of parking space occupancy and details",

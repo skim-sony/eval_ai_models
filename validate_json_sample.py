@@ -11,7 +11,7 @@ if __name__ == "__main__":
 
     base_path = os.path.dirname(os.path.abspath(__file__))
     schema_path = os.path.join(base_path, 'schema/output_main_schema.json')
-    sample_path = os.path.join(base_path, 'sample/output_sample.json')
+    sample_path = os.path.join(base_path, 'sample/frame_output_sample.json')
 
     main_schema = read_json_file(schema_path)
     sample = read_json_file(sample_path)

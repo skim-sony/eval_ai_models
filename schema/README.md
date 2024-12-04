@@ -6,6 +6,9 @@ Below is the link to the main schema files:
 - [config_main_schema.json](https://github.com/smart-camera-engagement/eval-ai-models/blob/v1.0.1/schemas/config_main_schema.json): config main schema to log configurations and settings of AI model and algorithm.
 - [output_main_schema.json](https://github.com/smart-camera-engagement/eval-ai-models/blob/v1.0.1/schemas/output_main_schema.json): output main schema for frame-based or event outputs
 
+Below is an overview of each sub-schema configuration and its corresponding output file.
+
+![schema](v1.0.1.png)
 ----
 
 ### config_main_schema.json

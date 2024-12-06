@@ -92,7 +92,7 @@
 		  
     "vehicle_type": {
       "type": "string",
-      "enum": ["bicycle", "cargo_bicycle", "car", "scooter", "moped", "motorcycle", "truck", "van", "freight", "other", "unspecified", "pedestrian"]
+      "enum": ["bicycle", "cargo_bicycle", "car", "scooter", "moped", "motorcycle", "truck", "van", "freight", "other", "unspecified"]
     },
 		  
     "vehicle_blocked_lane_types": {

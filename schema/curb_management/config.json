@@ -4,9 +4,22 @@
   "version": "1.0.2",
   "type": "object",
   "properties": {
+    "area":{
+      "description": "Zone configuration for curb management",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "curb_area_id": {
+            "type": "string",
+            "enum": ["parking_zone_0", "parking_zone_1", "loading_zone_0", "loading_zone_1", "bike_lane_0", "bike_lane_1", "traffic_lane_0", "traffic_lane_1", "sidewalk_0", "sidewalk_1"]
+          }
+        }
+      }
+    },
     
     "zone": {
-      "$comment": "Zone configuration for curb management",
+      "description": "Zone configuration for curb management",
       "type": "array",
       "items": {
         "type": "object",
@@ -49,7 +62,7 @@
     },
 
     "space": {
-      "$comment": "Space configuration for curb management",
+      "description": "Space configuration for curb management",
       "type": "array",
       "items": {
         "type": "object",

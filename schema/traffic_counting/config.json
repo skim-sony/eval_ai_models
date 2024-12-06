@@ -26,7 +26,7 @@
     },
 
     "counting_boundary": {
-      "$comment": "Boundary configuration for traffic counting",
+      "description": "Boundary configuration for traffic counting",
       "type": "array",
       "items": {
         "type": "object",
@@ -67,6 +67,6 @@
       }
     }
   },
-  "required": ["counting_type", "counting_frequency", "counting_boundary"],
+  "required": ["counting_type", "counting_interval", "counting_boundary"],
   "additionalProperties": false
 }

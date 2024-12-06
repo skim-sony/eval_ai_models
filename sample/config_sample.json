@@ -177,6 +177,34 @@
 				}
 			}
 		]
+	},
+
+	"asset_config":{
+		"dwell_time_threshold": 240,
+		"assets": [
+			{
+				"asset_id": "asset_0",
+				"asset_type": "wastebin",
+				"geometry": {
+				  "type": "LineString",
+				  "coordinates": [[
+					[-73.982105, 40.767932],
+					[-73.973694, 40.764551]
+				  ]]
+				}
+			},
+			{
+				"asset_id": "asset_1",
+				"asset_type": "camera",
+				"geometry": {
+				  "type": "LineString",
+				  "coordinates": [[
+					[-73.982105, 40.767932],
+					[-73.973694, 40.764551]
+				  ]]
+				}
+			}
+		]
 	}
   }
 }

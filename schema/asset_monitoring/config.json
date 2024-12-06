@@ -5,7 +5,60 @@
   "type": "object",
   "properties": {
     
+    "dwell_time_threshold": {
+      "type": "number",
+      "description": "Time threshold for the suspected person involved in vandalism [in seconds]."
+    },
+
+    "assets": {
+      "description": "asset configuration for asset vandalism monitoring",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "asset_id": {
+            "type": "string",
+            "description": "Unique identifier for assets"
+          },
+
+          "asset_type": {
+            "type": "string",
+            "description": "Type of assets"
+          },
+
+          "geometry": {
+            "type": "object",
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": ["LineString", "Polygon"]
+              },
+              "coordinates": {
+                "type": "array",
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": "array",
+                    "items": {
+                      "type": "number"
+                    },
+                    "minItems": 2,
+                    "maxItems": 2
+                  }
+                },
+                "minItems": 1,
+                "maxItems": 1
+              }
+            },
+            "required": ["type", "coordinates"],
+            "additionalProperties": false
+          }
+        },
+        "required": ["asset_id", "asset_type", "geometry"],
+        "additionalProperties": false
+      }
+    }
   },
-  "required": [],
+  "required": ["assets"],
   "additionalProperties": false
 }

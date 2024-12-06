@@ -16,7 +16,7 @@
 
     "assetType": {
       "type": "string",
-      "enum": ["vehicle", "building", "streetlight", "wastebin", "banner", "other", "unspecified"],
+      "enum": ["vehicle", "building", "streetlight", "wastebin", "banner", "camera", "other", "unspecified"],
       "description": "Type of the asset that was vandalized"
     },
 

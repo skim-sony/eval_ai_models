@@ -64,10 +64,10 @@
     "frame_id": 60,
     "timestamp": "2023-10-01T12:00:00Z",
     
-    "curb_mgmt_event": {
+    "counting_event": {
       "event_id": 2,
       "event_type": "pass_counting_boundary",
-      "event_purpose": "unspecified",
+      "event_purpose": "through",
       "event_location": {
         "type": "Feature",
         "properties": { 
@@ -92,10 +92,10 @@
     "frame_id": 65,
     "timestamp": "2023-10-01T12:00:00Z",
 
-    "curb_mgmt_event": {
+    "counting_event": {
       "event_id": 3,
       "event_type": "pass_counting_boundary",
-      "event_purpose": "unspecified",
+      "event_purpose": "through",
       "event_location": {
         "type": "Feature",
         "properties": { 

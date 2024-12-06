@@ -12,8 +12,8 @@
 
 	"counting_config":{
 		"counting_type": "total",
-		"counting_frequency": {
-			"unit": "frame",
+		"counting_interval": {
+			"unit": "minute",
 			"frquency": 1
 		},
 		"counting_boundary":[

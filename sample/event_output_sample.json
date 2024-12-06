@@ -1,0 +1,120 @@
+{
+  "outputs":[
+  {
+    "frame_id": 50,
+    "timestamp": "2023-10-01T12:00:00Z",
+
+    "curb_mgmt_event": {
+      "event_id": 0,
+      "event_type": "park_start",
+      "event_purpose": "parcel_delivery",
+      "event_location": {
+        "type": "Feature",
+        "properties": { 
+          "timestamp": 1696161600000,
+          "speed": 1.21
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [ -85.7629808, 38.257341 ]
+        }
+      },
+      "event_time": "1696161600000",
+      "event_publication_time": "1696161600000",
+      "curb_zone_id": "parking_zone_1",
+      "curb_area_ids": ["s_4th_st"],
+      "curb_space_id": "parking_space_3",
+      "object_id": 0,
+      "vehicle_length": 670,
+      "vehicle_type": "truck",
+      "vehicle_blocked_lane_types": ["parking"]
+    }
+  },
+  {
+    "frame_id": 55,
+    "timestamp": "2023-10-01T12:00:00Z",
+
+    "curb_mgmt_event": {
+      "event_id": 1,
+      "event_type": "park_end",
+      "event_purpose": "parcel_delivery",
+      "event_location": {
+        "type": "Feature",
+        "properties": { 
+          "timestamp": 1696161600000,
+          "speed": 1.21
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [ -85.7629808, 38.257341 ]
+        }
+      },
+      "event_time": "1696161600000",
+      "event_publication_time": "1696161600000",
+      "curb_zone_id": "parking_zone_1",
+      "curb_area_ids": ["s_4th_st"],
+      "curb_space_id": "parking_space_3",
+      "object_id": 0,
+      "vehicle_length": 670,
+      "vehicle_type": "truck",
+      "vehicle_blocked_lane_types": ["parking"]
+    }
+  },
+  {
+    "frame_id": 60,
+    "timestamp": "2023-10-01T12:00:00Z",
+    
+    "curb_mgmt_event": {
+      "event_id": 2,
+      "event_type": "pass_counting_boundary",
+      "event_purpose": "unspecified",
+      "event_location": {
+        "type": "Feature",
+        "properties": { 
+          "timestamp": 1696161600000,
+          "speed": 1.21
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [ -85.7629808, 38.257341 ]
+        }
+      },
+      "event_time": "1696161600000",
+      "event_publication_time": "1696161600000",
+      "curb_zone_id": "traffic_lane_0",
+      "curb_area_ids": ["s_4th_st"],
+      "object_id": 0,
+      "vehicle_length": 670,
+      "vehicle_type": "car"
+    }
+  },
+  {
+    "frame_id": 65,
+    "timestamp": "2023-10-01T12:00:00Z",
+
+    "curb_mgmt_event": {
+      "event_id": 3,
+      "event_type": "pass_counting_boundary",
+      "event_purpose": "unspecified",
+      "event_location": {
+        "type": "Feature",
+        "properties": { 
+          "timestamp": 1696161600000,
+          "speed": 1.21
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [ -85.7629808, 38.257341 ]
+        }
+      },
+      "event_time": "1696161600000",
+      "event_publication_time": "1696161600000",
+      "curb_zone_id": "sidewalk_0",
+      "curb_area_ids": ["s_4th_st"],
+      "object_id": 0,
+      "vehicle_length": 670,
+      "vehicle_type": "pedestrian"
+    }
+  }
+]
+}

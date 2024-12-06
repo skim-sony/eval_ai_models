@@ -30,7 +30,7 @@ The 'config_main_schema.json' file consists of several subschemas: 'general_conf
 | Field Name            | Required  | Data Type | Description |
 |-----------------------|-----------|-----------|-------------|
 | counting_type   |   Y       | string   | Type of count measurement (supported types: "total", "peak", "average") |
-| counting_frequency   |   Y       | object   | Frequency of count measurement (unit: "frame", "second", "minute") |
+| counting_interval   |   Y       | object   | Interval of count measurement (unit: "frame", "second", "minute") |
 | counting_boundary   |   Y       | array   | Boundary configuration for traffic counting ([LineString](https://datatracker.ietf.org/doc/html/rfc7946#appendix-A.2) and [Polygon](https://datatracker.ietf.org/doc/html/rfc7946#appendix-A.3) are supported for geometry.)|
 
 #### 'curb_config' object

@@ -13,12 +13,40 @@
 	 
 	  "counting_results": {
 		"traffic_boundary_nb": {
-			"car": 3,
-			"truck": 0
+			"through": {
+				"car": 3,
+				"truck": 0
+			},
+			"left_turn": {
+				"car": 0,
+				"truck": 0
+			},
+			"right_turn": {
+				"car": 0,
+				"truck": 0
+			},
+			"uturn": {
+				"car": 0,
+				"truck": 0
+			}
 		},
 		"traffic_boundary_sb": {
-			"car": 3,
-			"truck": 0
+			"through": {
+				"car": 3,
+				"truck": 0
+			},
+			"left_turn": {
+				"car": 0,
+				"truck": 0
+			},
+			"right_turn": {
+				"car": 0,
+				"truck": 0
+			},
+			"uturn": {
+				"car": 0,
+				"truck": 0
+			}
 		},
 		"bike_boundary_nb": {
 			"bicycle": 0

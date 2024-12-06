@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "aitrios:app:output:counting",
-  "version": "1.0.1",
+  "$id": "aitrios:app:output:frame:counting",
+  "version": "1.0.2",
   "type": "object",
   "description": "Counts of vehicles and pedestrians at various boundaries",
   "additionalProperties": {

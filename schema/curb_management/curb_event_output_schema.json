@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "aitrios:app:output:curb",
-  "version": "1.0.1",
+  "$id": "aitrios:app:output:event:curb",
+  "version": "1.0.2",
   "type": "object",
   "properties": {
     "event_id": {
@@ -112,7 +112,6 @@
     "event_publication_time",
     "curb_zone_id",
     "curb_area_ids",
-    "curb_space_id",
     "object_id",
     "vehicle_type"
   ],

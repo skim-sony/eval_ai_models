@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "aitrios:app:output:parking",
-  "version": "1.0.1",
+  "$id": "aitrios:app:output:frame:parking",
+  "version": "1.0.2",
   "type": "object",
   "description": "Results of parking space occupancy and details",
   "additionalProperties": {

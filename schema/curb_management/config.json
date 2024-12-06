@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "aitrios:app:config:curb",
-  "version": "1.0.1",
+  "$id": "aitrios:app:config:asset",
+  "version": "1.0.2",
   "type": "object",
   "properties": {
     

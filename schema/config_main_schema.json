@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "aitrios:app:config:main",
   "title": "Main schema for configurations",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "object",
   "properties": {
     "app_config": { 
@@ -11,7 +11,8 @@
       "properties": {
         "general_config": { "$ref": "schema/general_config.json" },
         "counting_config": { "$ref": "schema/traffic_counting/config.json" },
-        "curb_config": { "$ref": "schema/curb_management/config.json" }
+        "curb_config": { "$ref": "schema/curb_management/config.json" },
+        "asset_config": { "$ref": "schema/asset_monitoring/config.json" }
       },
       "required": [
         "general_config"

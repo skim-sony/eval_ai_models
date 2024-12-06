@@ -16,6 +16,16 @@ if __name__ == "__main__":
     main_schema = read_json_file(schema_path)
     sample = read_json_file(sample_path)
     
+    # if 'curb_mgmt_event' in sample['outputs'][2]:
+    #     print("'curb_mgmt_event' exists")
+    # else:
+    #     print("'curb_mgmt_event' doesn't exist")
+    
+    # if 'counting_event' in sample['outputs'][2]:
+    #     print("'counting_event' exists")
+    # else:
+    #     print("'curb_mgmt_event' doesn't exist")
+    
     try:
         # validate(instance=sample, schema=main_schema)
         resolver = RefResolver(base_uri="file:///C:/Users/3000095175/Documents/codes/eval-ai-models/", referrer=True)

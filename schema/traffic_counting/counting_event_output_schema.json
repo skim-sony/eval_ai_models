@@ -33,7 +33,7 @@
             },
             "speed": {
               "type": "number",
-              "$comment": "Speed of the vehicle in m/s"
+              "description": "Speed of the vehicle in m/s"
             }
           },
           "required": ["timestamp", "speed"]
@@ -82,6 +82,10 @@
     "curb_space_id": {
       "type": "string"
     },
+
+    "boundary_id": {
+      "type": "string"
+    },
 		  
     "object_id": {
       "type": "integer"
@@ -111,8 +115,9 @@
     "event_location",
     "event_time",
     "event_publication_time",
-    "curb_zone_id",
     "curb_area_ids",
+    "curb_zone_id",
+    "boundary_id",
     "object_id",
     "vehicle_type"
   ],

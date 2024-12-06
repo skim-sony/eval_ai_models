@@ -17,7 +17,8 @@
       "required": [
         "general_config"
       ]
-    }
+    },
+    "additionalProperties": false
   },
   "required": [
     "app_config"

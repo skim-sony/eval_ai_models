@@ -21,7 +21,8 @@
           "counting_event": { "$ref": "schema/traffic_counting/counting_event_output_schema.json" },
           "asset_event": { "$ref": "schema/asset_monitoring/asset_event_output_schema.json" }
         }
-      }
+      },
+      "additionalProperties": false
     }
   },
   "required": [

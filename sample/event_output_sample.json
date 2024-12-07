@@ -125,7 +125,7 @@
     "asset_event": {
       "event_id": 4,
       "assetId": "asset_0",
-      "assetType": "wastebin",
+      "assetType": "cablebox",
       "event_location": {
         "type": "Feature",
         "properties": { 

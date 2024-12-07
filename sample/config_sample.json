@@ -14,7 +14,7 @@
 		"counting_type": "total",
 		"counting_interval": {
 			"unit": "minute",
-			"frquency": 1
+			"frquency": 5
 		},
 		"counting_boundary":[
 			{

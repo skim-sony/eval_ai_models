@@ -19,7 +19,7 @@
           "type": "string",
           "enum": ["frame", "second", "minute"]
         },
-        "frquency": {
+        "interval": {
           "type": "integer"
         }
       }

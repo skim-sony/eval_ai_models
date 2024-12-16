@@ -10,54 +10,12 @@
     
     "event_type": {
       "type": "string",
-      "enum": ["pass_counting_boundary"]
+      "enum": ["counting"]
     },
     
     "event_purpose": {
       "type": "string",
       "enum": ["through", "right_turn", "left_turn", "u_turn", "unspecified"]
-    },
-    
-    "event_location": {
-      "type": "object",
-      "properties": {
-        "type": {
-          "type": "string",
-          "enum": ["Feature"]
-        },
-        "properties": {
-          "type": "object",
-          "properties": {
-            "timestamp": {
-              "type": "integer"
-            },
-            "speed": {
-              "type": "number",
-              "description": "Speed of the vehicle in m/s"
-            }
-          },
-          "required": ["timestamp", "speed"]
-        },
-        "geometry": {
-          "type": "object",
-          "properties": {
-            "type": {
-              "type": "string",
-              "enum": ["Point"]
-            },
-            "coordinates": {
-              "type": "array",
-              "items": {
-                "type": "number"
-              },
-              "minItems": 2,
-              "maxItems": 2
-            }
-          },
-          "required": ["type", "coordinates"]
-        }
-      },
-      "required": ["type", "properties", "geometry"]
     },
     
     "event_time": {
@@ -87,24 +45,24 @@
       "type": "string"
     },
 		  
-    "object_id": {
-      "type": "integer"
-    },
-
-    "vehicle_length": {
-      "type": "integer"
-    },
-		  
-    "vehicle_type": {
-      "type": "string",
-      "enum": ["bicycle", "cargo_bicycle", "car", "scooter", "moped", "motorcycle", "truck", "van", "freight", "other", "unspecified", "pedestrian"]
-    },
-		  
-    "vehicle_blocked_lane_types": {
-      "type": "array",
-      "items": {
-        "type": "string",
-        "enum": ["travel_lane", "turn_lane", "bike_lane", "bus_lane", "parking", "shoulder", "median", "sidewalk", "unspecified"]
+    "vehicle_count": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "count": {
+            "type": "integer"
+          },
+          "speed": {
+            "description": "Speed of the vehicle in m/s",
+            "type": "number"
+          }
+        },
+        "required": [
+          "count",
+          "speed"
+        ],
+        "additionalProperties": false
       }
     }
   },
@@ -112,14 +70,12 @@
     "event_id",
     "event_type",
     "event_purpose",
-    "event_location",
     "event_time",
     "event_publication_time",
     "curb_area_ids",
     "curb_zone_id",
     "boundary_id",
-    "object_id",
-    "vehicle_type"
+    "vehicle_count"
   ],
   "additionalProperties": false
 }

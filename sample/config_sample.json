@@ -92,7 +92,8 @@
 					[-73.949318, 40.796918],
 					[-73.958416, 40.800686],
 					[-73.982105, 40.767932]
-				  ]]
+				  ]],
+				  "curb_space_ids": ["parking_space_0", "parking_space_1"]
 				}
 			},
 			{
@@ -144,7 +145,8 @@
 					[-73.949318, 40.796918],
 					[-73.958416, 40.800686],
 					[-73.982105, 40.767932]
-				  ]]
+				  ]],
+				  "curb_object_ids": ["asset_0"]
 				}
 			}
 		],
@@ -160,7 +162,8 @@
 					[-73.949318, 40.796918],
 					[-73.958416, 40.800686],
 					[-73.982105, 40.767932]
-				]]
+				]],
+				"curb_zone_id": "parking_zone_0"
 				}
 			},
 			{
@@ -173,38 +176,27 @@
 					[-73.949318, 40.796918],
 					[-73.958416, 40.800686],
 					[-73.982105, 40.767932]
-				]]
+				]],
+				"curb_zone_id": "parking_zone_0"
 				}
+			}
+		],
+
+		"object": [
+			{
+				"curb_object_id": "asset_0",
+				"geometry": {
+				"type": "Point",
+				"coordinates": [-73.982105, 40.767932]
+				},
+				"object_type": "signal_cabinet",
+				"curb_zone_id": "sidewalk_0"
 			}
 		]
 	},
 
 	"asset_config":{
-		"dwell_time_threshold": 240,
-		"assets": [
-			{
-				"asset_id": "asset_0",
-				"asset_type": "wastebin",
-				"geometry": {
-				  "type": "LineString",
-				  "coordinates": [[
-					[-73.982105, 40.767932],
-					[-73.973694, 40.764551]
-				  ]]
-				}
-			},
-			{
-				"asset_id": "asset_1",
-				"asset_type": "camera",
-				"geometry": {
-				  "type": "LineString",
-				  "coordinates": [[
-					[-73.982105, 40.767932],
-					[-73.973694, 40.764551]
-				  ]]
-				}
-			}
-		]
+		"dwell_time_threshold": 240
 	}
   }
 }

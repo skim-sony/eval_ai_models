@@ -126,10 +126,6 @@
         }
       },
       "status": "reported",
-      "evidence": {
-        "type": "video",
-        "url": "https://example.com/image.jpg"
-      },
       "curb_area_ids": ["s_4th_st"],
       "curb_zone_id": "sidewalk_0",
       "object_id": 10

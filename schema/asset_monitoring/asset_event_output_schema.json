@@ -67,24 +67,6 @@
       "enum": ["reported", "under_investigation", "resolved"],
       "description": "Current status of the vandalism incident"
     },
-    
-    "evidence": {
-      "type": "object",
-      "properties": {
-        "type": {
-          "type": "string",
-          "enum": ["photo", "video", "other"],
-          "description": "Type of evidence provided"
-        },
-        "url": {
-          "type": "string",
-          "format": "uri",
-          "description": "URL link to the evidence"
-        }
-      },
-      "required": ["type", "url"],
-      "description": "Collection of evidence related to the vandalism incident"
-    },
 
     "curb_zone_id": {
       "type": "string"

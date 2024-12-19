@@ -16,7 +16,7 @@
 
     "asset_type": {
       "type": "string",
-      "enum": ["vehicle", "building", "streetlight", "wastebin", "banner", "camera", "cablebox", "other", "unspecified"],
+      "enum": ["signage", "bus_stop", "bike_rack", "scooter_parking", "ev_charging", "ramp", "meter", "pay_station", "paint", "lighting", "signal_cabinet", "utility_box", "fire_hydrant", "surveillance_camera", "barrier", "bollard", "street_trees", "planter", "drinking_fountain", "toilet", "bench", "sculpture", "art", "fountain", "solid_waste_bins", "post_box", "locker", "food_vendor", "other", "unspecified"],
       "description": "Type of the asset that was vandalized"
     },
 

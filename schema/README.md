@@ -1,18 +1,18 @@
 # Descriptions for standardized JSON output schema
 
-This README describes the JSON output schema that we standardized for the AITRIOS AI model output. The current JSON output schema (v1.0.1) is primarily intended for DNN object detection and post-processing for smart city use-cases, such as traffic counting and curb management. It can be expanded  to more use-cases and can be easily added to the main schema. 
+This README describes the JSON output schema that we standardized for the AITRIOS AI model output. The current JSON output schema (v1.0.2) is primarily intended for DNN object detection and post-processing for smart city use-cases, such as traffic counting and curb management. It can be expanded to more use-cases and can be easily added to the main schema. 
 
 Below is the link to the main schema files:
-- [config_main_schema.json](https://github.com/smart-camera-engagement/eval-ai-models/blob/v1.0.1/schemas/config_main_schema.json): config main schema to log configurations and settings of AI model and algorithm.
-- [output_main_schema.json](https://github.com/smart-camera-engagement/eval-ai-models/blob/v1.0.1/schemas/output_main_schema.json): output main schema for frame-based or event outputs
+- [config_main_schema.json](https://github.com/smart-camera-engagement/eval-ai-models/blob/v1.0.2/schema/config_main_schema.json): config main schema to log configurations and settings of AI model and algorithm.
+- [output_main_schema.json](https://github.com/smart-camera-engagement/eval-ai-models/blob/v1.0.2/schema/output_main_schema.json): output main schema for frame-based or event outputs
 
 Below is an overview of each sub-schema configuration and its corresponding output file.
 
-![schema](v1.0.1.png)
+![schema](v1.0.2.png)
 ----
 
 ### config_main_schema.json
-The 'config_main_schema.json' file consists of several subschemas: 'general_config', 'counting_config' and 'curb_config'.
+The 'config_main_schema.json' file consists of several subschemas: 'general_config', 'counting_config', 'curb_config' and 'asset_config'.
 
 #### 'general_config' object
 | Field Name            | Required  | Data Type | Description |
@@ -36,11 +36,18 @@ The 'config_main_schema.json' file consists of several subschemas: 'general_conf
 #### 'curb_config' object
 | Field Name            | Required  | Data Type | Description |
 |-----------------------|-----------|-----------|-------------|
-| zone   |   Y       | array   | Zone configuration for curb management (supported curb_zone_id: "parking_zone_0", "parking_zone_1", "loading_zone_0", "loading_zone_1", "bike_lane_0", "bike_lane_1", "traffic_lane_0", "traffic_lane_1", "sidewalk_0", "sidewalk_1") |
-| space   |   Y       | array   | Space configuration for curb management (supported curb_space_id: "parking_space_0", "parking_space_1", "parking_space_2", "parking_space_3", "parking_space_4", "parking_space_5", "parking_space_6", "parking_space_7", "parking_space_8", "parking_space_9") |
+| area   |   N       | array   | Area configuration for curb management |
+| zone   |   Y       | array   | Zone configuration for curb management (example for curb_zone_id: "parking_zone_0", "parking_zone_1", "loading_zone_0", "loading_zone_1", "bike_lane_0", "bike_lane_1", "traffic_lane_0", "traffic_lane_1", "sidewalk_0", "sidewalk_1") |
+| space   |   Y       | array   | Space configuration for curb management (example for curb_space_id: "parking_space_0", "parking_space_1", "parking_space_2", ...) |
+| object   |   N       | array   | Object configuration for curb management |
+
+#### 'asset_config' object
+| Field Name            | Required  | Data Type | Description |
+|-----------------------|-----------|-----------|-------------|
+| dwell_time_threshold   |   N       | number   | Time threshold for the suspected person involved in vandalism [in seconds] |
 
 ### output_main_schema.json
-The 'output_main_schema.json' file can be used for both frame-based output and event-based output. Frame-based output is primarily for evaluation purposes, while event-based output is intended for system integration with the dashboard. The main schema consists of several subschemas: 'detection_results', 'counting_results', 'parking_results' and 'curb_management_results'. The descriptions for 'counting_results' and 'parking_results' are omitted in this document. Please take a look at a sample output file '[frame_output_sample.json](https://github.com/smart-camera-engagement/eval-ai-models/blob/v1.0.1/sample/frame_output_sample.json).'
+The 'output_main_schema.json' file can be used for both frame-based output and event-based output. Frame-based output is primarily for internal evaluation purposes, while event-based output is intended for system integration with the dashboard. The main schema consists of several subschemas: 'detection_results', 'counting_results', 'parking_results' for frame-based outputs and 'curb_management_event', 'counting_event' and 'asset_event' for event outputs. The descriptions for 'counting_results' and 'parking_results' are omitted in this document. Please take a look at a sample output file '[frame_output_sample.json](https://github.com/smart-camera-engagement/eval-ai-models/blob/v1.0.2/sample/frame_output_sample.json).'
 
 | Field Name | Required  | Data Type | Description |
 |------------|-----------|-----------|-------------|
@@ -61,3 +68,4 @@ The 'output_main_schema.json' file can be used for both frame-based output and e
 |------------|-----------|-------------|
 | 1.0.0      | 11/6/2024 | First version created for DNN object detection output and smart city use-case |
 | 1.0.1      | 11/15/2024 | Updated the main schema into separate subschemas depending on use-case |
+| 1.0.2      | 12/20/2024 | Updated traffic counting schema and added asset monitoring schema |

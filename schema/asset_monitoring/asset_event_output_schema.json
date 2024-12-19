@@ -9,12 +9,12 @@
       "description": "Unique identifier for the vandalism incident"
     },
 
-    "assetId": {
+    "asset_id": {
       "type": "string",
       "description": "Unique identifier for the asset that was vandalized"
     },
 
-    "assetType": {
+    "asset_type": {
       "type": "string",
       "enum": ["vehicle", "building", "streetlight", "wastebin", "banner", "camera", "cablebox", "other", "unspecified"],
       "description": "Type of the asset that was vandalized"
@@ -89,7 +89,7 @@
     }
   },
   "required": [
-    "event_id", "assetId", "assetType", "event_location", "status"
+    "event_id", "asset_id", "asset_type", "event_location", "status"
   ],
   "additionalProperties": false
 }

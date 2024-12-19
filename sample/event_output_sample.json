@@ -113,7 +113,7 @@
     "asset_event": {
       "event_id": 4,
       "asset_id": "asset_0",
-      "asset_type": "cablebox",
+      "asset_type": "signal_cabinet",
       "event_location": {
         "type": "Feature",
         "properties": { 

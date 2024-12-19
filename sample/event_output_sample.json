@@ -112,8 +112,8 @@
 
     "asset_event": {
       "event_id": 4,
-      "asset_id": "asset_0",
-      "asset_type": "signal_cabinet",
+      "curb_object_id": "asset_0",
+      "object_type": "signal_cabinet",
       "event_location": {
         "type": "Feature",
         "properties": { 

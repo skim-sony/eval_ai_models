@@ -15,7 +15,7 @@
     
     "event_purpose": {
       "type": "string",
-      "enum": ["through", "right_turn", "left_turn", "u_turn", "unspecified"]
+      "enum": ["through", "forward", "reverse", "right_turn", "left_turn", "u_turn", "unspecified"]
     },
     
     "event_time": {

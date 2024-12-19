@@ -112,8 +112,8 @@
 
     "asset_event": {
       "event_id": 4,
-      "assetId": "asset_0",
-      "assetType": "cablebox",
+      "asset_id": "asset_0",
+      "asset_type": "cablebox",
       "event_location": {
         "type": "Feature",
         "properties": { 

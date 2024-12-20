@@ -113,7 +113,7 @@
     "asset_event": {
       "event_id": 4,
       "curb_object_id": "asset_0",
-      "object_type": "signal_cabinet",
+      "curb_object_type": "signal_cabinet",
       "event_location": {
         "type": "Feature",
         "properties": { 
@@ -125,10 +125,10 @@
           "coordinates": [ -85.7629808, 38.257341 ]
         }
       },
-      "status": "reported",
+      "status": "on",
       "curb_area_ids": ["s_4th_st"],
       "curb_zone_id": "sidewalk_0",
-      "object_id": 10
+      "object_ids": [10]
     }
   }
 ]

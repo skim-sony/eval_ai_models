@@ -14,7 +14,7 @@
       "description": "Unique identifier for the asset that was vandalized"
     },
 
-    "object_type": {
+    "curb_object_type": {
       "type": "string",
       "enum": ["signage", "bus_stop", "bike_rack", "scooter_parking", "ev_charging", "ramp", "meter", "pay_station", "paint", "lighting", "signal_cabinet", "utility_box", "fire_hydrant", "surveillance_camera", "barrier", "bollard", "street_trees", "planter", "drinking_fountain", "toilet", "bench", "sculpture", "art", "fountain", "solid_waste_bins", "post_box", "locker", "food_vendor", "other", "unspecified"],
       "description": "Type of the asset that was vandalized"
@@ -64,7 +64,7 @@
     
     "status": {
       "type": "string",
-      "enum": ["reported", "under_investigation", "resolved"],
+      "enum": ["on", "off"],
       "description": "Current status of the vandalism incident"
     },
 
@@ -83,13 +83,16 @@
       "type": "string"
     },
 
-    "object_id": {
-      "type": "integer",
-      "description": "Unique identifier for the person who vandalized the asset"
+    "object_ids": {
+      "type": "array",
+        "items": {
+          "type": "integer"
+        },
+      "description": "Unique identifier for the intruders who vandalized the asset"
     }
   },
   "required": [
-    "event_id", "asset_id", "asset_type", "event_location", "status"
+    "event_id", "curb_object_id", "curb_object_type", "event_location", "status", "curb_zone_id", "curb_area_ids", "object_ids"
   ],
   "additionalProperties": false
 }

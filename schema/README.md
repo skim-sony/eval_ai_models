@@ -1,14 +1,14 @@
 # Descriptions for standardized JSON output schema
 
-This README describes the JSON output schema that we standardized for the AITRIOS AI model output. The current JSON output schema (v1.0.2) is primarily intended for DNN object detection and post-processing for smart city use-cases, such as traffic counting and curb management. It can be expanded to more use-cases and can be easily added to the main schema. 
+This README describes the JSON output schema that we standardized for the AITRIOS AI model output. The current JSON output schema (v1.0.3) is primarily intended for DNN object detection and post-processing for smart city use-cases, such as traffic counting and curb management. It can be expanded to more use-cases and can be easily added to the main schema. 
 
 Below is the link to the main schema files:
-- [config_main_schema.json](https://github.com/smart-camera-engagement/eval-ai-models/blob/v1.0.2/schema/config_main_schema.json): config main schema to log configurations and settings of AI model and algorithm.
-- [output_main_schema.json](https://github.com/smart-camera-engagement/eval-ai-models/blob/v1.0.2/schema/output_main_schema.json): output main schema for frame-based or event outputs
+- [config_main_schema.json](https://github.com/smart-camera-engagement/eval-ai-models/blob/v1.0.3/schema/config_main_schema.json): config main schema to log configurations and settings of AI model and algorithm.
+- [output_main_schema.json](https://github.com/smart-camera-engagement/eval-ai-models/blob/v1.0.3/schema/output_main_schema.json): output main schema for frame-based or event outputs
 
 Below is an overview of each sub-schema configuration and its corresponding output file.
 
-![schema](v1.0.2.png)
+![schema](v1.0.3.png)
 ----
 
 ### config_main_schema.json
@@ -47,7 +47,7 @@ The 'config_main_schema.json' file consists of several subschemas: 'general_conf
 | dwell_time_threshold   |   N       | number   | Time threshold for the suspected person involved in vandalism [in seconds] |
 
 ### output_main_schema.json
-The 'output_main_schema.json' file can be used for both frame-based output and event-based output. Frame-based output is primarily for internal evaluation purposes, while event-based output is intended for system integration with the dashboard. The main schema consists of several subschemas: 'detection_results', 'counting_results', 'parking_results' for frame-based outputs and 'curb_management_event', 'counting_event' and 'asset_event' for event outputs. The descriptions for 'counting_results' and 'parking_results' are omitted in this document. Please take a look at a sample output file '[frame_output_sample.json](https://github.com/smart-camera-engagement/eval-ai-models/blob/v1.0.2/sample/frame_output_sample.json).'
+The 'output_main_schema.json' file can be used for both frame-based output and event-based output. Frame-based output is primarily for internal evaluation purposes, while event-based output is intended for system integration with the dashboard. The main schema consists of several subschemas: 'detection_results', 'counting_results', 'parking_results' for frame-based outputs and 'curb_management_event', 'counting_event' and 'asset_event' for event outputs. The descriptions for 'counting_results' and 'parking_results' are omitted in this document. Please take a look at a sample output file '[frame_output_sample.json](https://github.com/smart-camera-engagement/eval-ai-models/blob/v1.0.3/sample/frame_output_sample.json).'
 
 | Field Name | Required  | Data Type | Description |
 |------------|-----------|-----------|-------------|
@@ -69,3 +69,4 @@ The 'output_main_schema.json' file can be used for both frame-based output and e
 | 1.0.0      | 11/6/2024 | First version created for DNN object detection output and smart city use-case |
 | 1.0.1      | 11/15/2024 | Updated the main schema into separate subschemas depending on use-case |
 | 1.0.2      | 12/20/2024 | Updated traffic counting schema and added asset monitoring schema |
+| 1.0.3      | 01/07/2025 | Modified the schema not to use nested objects as UrbanLogiq's ingestion engine is not able to handle them |

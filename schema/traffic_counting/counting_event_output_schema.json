@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "aitrios:app:output:event:counting",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "type": "object",
   "properties": {
     "event_id": {
@@ -45,25 +45,18 @@
       "type": "string"
     },
 		  
-    "vehicle_count": {
-      "type": "object",
-      "additionalProperties": {
-        "type": "object",
-        "properties": {
-          "count": {
-            "type": "integer"
-          },
-          "speed": {
-            "description": "Speed of the vehicle in m/s",
-            "type": "number"
-          }
-        },
-        "required": [
-          "count",
-          "speed"
-        ],
-        "additionalProperties": false
-      }
+    "vehicle_type": {
+      "type": "string",
+      "enum": ["bicycle", "cargo_bicycle", "car", "scooter", "moped", "motorcycle", "truck", "van", "freight", "pedestrian", "other", "unspecified"]
+    },
+
+    "count": {
+      "type": "integer"
+    },
+
+    "speed": {
+      "description": "Speed of the vehicle in m/s",
+      "type": "number"
     }
   },
   "required": [
@@ -75,7 +68,9 @@
     "curb_area_ids",
     "curb_zone_id",
     "boundary_id",
-    "vehicle_count"
+    "vehicle_type",
+    "count",
+    "speed"
   ],
   "additionalProperties": false
 }

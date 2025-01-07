@@ -73,16 +73,27 @@
       "curb_area_ids": ["s_4th_st"],
       "curb_zone_id": "traffic_lane_0",
       "boundary_id": "traffic_boundary_nb",
-      "vehicle_count": {
-        "car": {
-          "count": 37,
-          "speed": 1.21
-        },
-        "truck": {
-          "count": 0,
-          "speed": 0
-        }
-      }
+      "vehicle_type": "car",
+      "count": 37,
+      "speed": 1.21
+    }
+  },
+  {
+    "frame_id": 60,
+    "timestamp": "2023-10-01T12:00:00Z",
+    
+    "counting_event": {
+      "event_id": 2,
+      "event_type": "counting",
+      "event_purpose": "through",
+      "event_time": "1696161600000",
+      "event_publication_time": "1696161600000",
+      "curb_area_ids": ["s_4th_st"],
+      "curb_zone_id": "traffic_lane_0",
+      "boundary_id": "traffic_boundary_nb",
+      "vehicle_type": "truck",
+      "count": 0,
+      "speed": 0
     }
   },
   {
@@ -98,12 +109,9 @@
       "curb_area_ids": ["s_4th_st"],
       "curb_zone_id": "sidewalk_0",
       "boundary_id": "pedestrian_boundary_nb",
-      "vehicle_count": {
-        "pedestrian": {
-          "count": 3,
-          "speed": 1.21
-        }
-      }
+      "vehicle_type": "pedestrian",
+      "count": 3,
+      "speed": 1.21
     }
   },
   {

@@ -18,7 +18,7 @@
 		},
 		"counting_boundary":[
 			{
-				"boundary_id": "traffic_boundary_nb",
+				"boundary_id": "traffic_NB",
 				"geometry": {
 				  "type": "LineString",
 				  "coordinates": [[
@@ -28,7 +28,7 @@
 				}
 			},
 			{
-				"boundary_id": "traffic_boundary_sb",
+				"boundary_id": "traffic_SB",
 				"geometry": {
 				  "type": "LineString",
 				  "coordinates": [[
@@ -38,7 +38,7 @@
 				}
 			},
 			{
-				"boundary_id": "bike_boundary_nb",
+				"boundary_id": "bike_NB",
 				"geometry": {
 				  "type": "LineString",
 				  "coordinates": [[
@@ -48,7 +48,7 @@
 				}
 			},
 			{
-				"boundary_id": "bike_boundary_sb",
+				"boundary_id": "bike_SB",
 				"geometry": {
 				  "type": "LineString",
 				  "coordinates": [[
@@ -58,7 +58,7 @@
 				}
 			},
 			{
-				"boundary_id": "pedestrian_boundary_nb",
+				"boundary_id": "pedestrian_NB",
 				"geometry": {
 				  "type": "LineString",
 				  "coordinates": [[
@@ -68,7 +68,7 @@
 				}
 			},
 			{
-				"boundary_id": "pedestrian_boundary_sb",
+				"boundary_id": "pedestrian_SB",
 				"geometry": {
 				  "type": "LineString",
 				  "coordinates": [[

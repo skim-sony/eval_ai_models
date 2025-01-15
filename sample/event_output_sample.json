@@ -72,7 +72,7 @@
       "event_publication_time": "1696161600000",
       "curb_area_ids": ["s_4th_st"],
       "curb_zone_id": "traffic_lane_0",
-      "boundary_id": "traffic_boundary_nb",
+      "boundary_id": "traffic_NB",
       "vehicle_type": "car",
       "count": 37,
       "speed": 1.21
@@ -90,7 +90,7 @@
       "event_publication_time": "1696161600000",
       "curb_area_ids": ["s_4th_st"],
       "curb_zone_id": "traffic_lane_0",
-      "boundary_id": "traffic_boundary_nb",
+      "boundary_id": "traffic_NB",
       "vehicle_type": "truck",
       "count": 0,
       "speed": 0
@@ -108,7 +108,7 @@
       "event_publication_time": "1696161600000",
       "curb_area_ids": ["s_4th_st"],
       "curb_zone_id": "sidewalk_0",
-      "boundary_id": "pedestrian_boundary_nb",
+      "boundary_id": "pedestrian_NB",
       "vehicle_type": "pedestrian",
       "count": 3,
       "speed": 1.21

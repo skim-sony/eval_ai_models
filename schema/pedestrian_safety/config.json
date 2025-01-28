@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "aitrios:app:config:ped",
+  "version": "1.0.3",
+  "type": "object",
+  "properties": {
+    
+    "zone": {
+      "description": "Zone configuration for pedestrian safety monitoring",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "ped_monitor_zone_id": {
+            "type": "string"
+          },
+          "geometry": {
+            "type": "object",
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": ["Polygon"]
+              },
+              "coordinates": {
+                "type": "array",
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": "array",
+                    "items": {
+                      "type": "number"
+                    },
+                    "minItems": 2,
+                    "maxItems": 2
+                  }
+                },
+                "minItems": 1,
+                "maxItems": 1
+              }
+            },
+            "required": ["type", "coordinates"],
+            "additionalProperties": false
+          }
+        },
+        "required": ["ped_monitor_zone_id", "geometry"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["zone"],
+  "additionalProperties": false
+}

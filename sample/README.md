@@ -14,4 +14,4 @@ Below is the link to the files:
 | 1.0.0      | 11/6/2024 | First version created for DNN object detection output and smart city use-case |
 | 1.0.1      | 11/15/2024 | Updated the main schema into separate subschemas depending on use-case |
 | 1.0.2      | 12/20/2024 | Updated traffic counting schema and added asset monitoring schema |
-| 1.0.3      | 01/07/2025 | Modified the schema not to use nested objects as UrbanLogiq's ingestion engine is not able to handle them |
+| 1.0.3      | 01/28/2025 | Modified the schema not to use nested objects as UrbanLogiq's ingestion engine is not able to handle them, and added a new schema for pedestrian safety use-case |

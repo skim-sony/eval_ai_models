@@ -1,6 +1,6 @@
 # Descriptions for JSON output schema of curb management use-case
 
-This README describes the JSON output schema for curb management, which follows the [Curb Data Specification (CDS)](https://github.com/openmobilityfoundation/curb-data-specification/tree/main). The schema version 1.0.2 is primarily intended for system integration with the Umojo CDS server for the City of San Jose. Most fields are the same as those in the CDS, but some details differ. Below are the modifications from the CDS. 
+This README describes the JSON output schema for curb management, which follows the [Curb Data Specification (CDS)](https://github.com/openmobilityfoundation/curb-data-specification/tree/main). The schema version 1.0.3 is primarily intended for system integration with the Umojo CDS server for the City of San Jose. Most fields are the same as those in the CDS, but some details differ. Below are the modifications from the CDS. 
 - event_id: requires an integer rather than a UUID (128-bit unique ID) as used by the CDS.
 - event_type: "pass_counting_boundary" is added for traffic/bicycle/pedestrian counting.
 - vehicle type: "pedestrian" is added.
@@ -13,9 +13,9 @@ This README describes the JSON output schema for curb management, which follows 
  - curb_object_id: "asset_0" (please follow [link](https://github.com/openmobilityfoundation/curb-data-specification/tree/dev/curbs#curb-object) for curb object)
 
 Below is the link to the related files:
-- [curb_event_output_schema.json](https://github.com/smart-camera-engagement/eval-ai-models/blob/v1.0.2/schema/curb_management/curb_event_output_schema.json): output schema for event-based curb management output
-- [asset_event_output_schema.json](https://github.com/smart-camera-engagement/eval-ai-models/blob/v1.0.2/schema/asset_monitoring/asset_event_output_schema.json): output schema for event-based asset monitoring output
-- [event_output_sample.json](https://github.com/smart-camera-engagement/eval-ai-models/blob/v1.0.2/sample/event_output_sample.json): output sample
+- [curb_event_output_schema.json](https://github.com/smart-camera-engagement/eval-ai-models/blob/v1.0.3/schema/curb_management/curb_event_output_schema.json): output schema for event-based curb management output
+- [asset_event_output_schema.json](https://github.com/smart-camera-engagement/eval-ai-models/blob/v1.0.3/schema/asset_monitoring/asset_event_output_schema.json): output schema for event-based asset monitoring output
+- [event_output_sample.json](https://github.com/smart-camera-engagement/eval-ai-models/blob/v1.0.3/sample/event_output_sample.json): output sample
 ----
 
 ### curb_event_output_schema.json
@@ -54,3 +54,4 @@ The 'event_location' follows GeoJSON standard.
 | 1.0.0      | 11/6/2024 | First version created for SJ curb management |
 | 1.0.1      | 11/15/2024 | Updated the main schema into separate subschemas depending on use-case |
 | 1.0.2      | 12/20/2024 | Updated traffic counting schema and added asset monitoring schema |
+| 1.0.3      | 01/28/2025 | Modified the schema not to use nested objects as UrbanLogiq's ingestion engine is not able to handle them, and added a new schema for pedestrian safety use-case |

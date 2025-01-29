@@ -12,7 +12,7 @@ Below is an overview of each sub-schema configuration and its corresponding outp
 ----
 
 ### config_main_schema.json
-The 'config_main_schema.json' file consists of several subschemas: 'general_config', 'counting_config', 'curb_config' and 'asset_config'.
+The 'config_main_schema.json' file consists of several subschemas: 'general_config', 'counting_config', 'curb_config', 'asset_config' and 'ped_config'.
 
 #### 'general_config' object
 | Field Name            | Required  | Data Type | Description |
@@ -46,8 +46,13 @@ The 'config_main_schema.json' file consists of several subschemas: 'general_conf
 |-----------------------|-----------|-----------|-------------|
 | dwell_time_threshold   |   N       | number   | Time threshold for the suspected person involved in vandalism [in seconds] |
 
+#### 'ped_config' object
+| Field Name            | Required  | Data Type | Description |
+|-----------------------|-----------|-----------|-------------|
+| zone   |   N       | array   | Zone configuration for pedestrian safety monitoring (zone id and geometry) |
+
 ### output_main_schema.json
-The 'output_main_schema.json' file can be used for both frame-based output and event-based output. Frame-based output is primarily for internal evaluation purposes, while event-based output is intended for system integration with the dashboard. The main schema consists of several subschemas: 'detection_results', 'counting_results', 'parking_results' for frame-based outputs and 'curb_management_event', 'counting_event' and 'asset_event' for event outputs. The descriptions for 'counting_results' and 'parking_results' are omitted in this document. Please take a look at a sample output file '[frame_output_sample.json](https://github.com/smart-camera-engagement/eval-ai-models/blob/v1.0.3/sample/frame_output_sample.json).'
+The 'output_main_schema.json' file can be used for both frame-based output and event-based output. Frame-based output is primarily for internal evaluation purposes, while event-based output is intended for system integration with the dashboard. The main schema consists of several subschemas: 'detection_results', 'counting_results', 'parking_results' for frame-based outputs and 'curb_management_event', 'counting_event', 'asset_event' and 'ped_event' for event outputs. The descriptions for 'counting_results' and 'parking_results' are omitted in this document. Please take a look at a sample output file '[frame_output_sample.json](https://github.com/smart-camera-engagement/eval-ai-models/blob/v1.0.3/sample/frame_output_sample.json).'
 
 | Field Name | Required  | Data Type | Description |
 |------------|-----------|-----------|-------------|

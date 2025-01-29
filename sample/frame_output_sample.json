@@ -10,57 +10,6 @@
 		"object_class": ["car", "car", "car"],
 		"object_score": [0.5, 0.7, 0.7]
 	  },
-	 
-	  "counting_results": {
-		"traffic_boundary_nb": {
-			"through": {
-				"car": 3,
-				"truck": 0
-			},
-			"left_turn": {
-				"car": 0,
-				"truck": 0
-			},
-			"right_turn": {
-				"car": 0,
-				"truck": 0
-			},
-			"uturn": {
-				"car": 0,
-				"truck": 0
-			}
-		},
-		"traffic_boundary_sb": {
-			"through": {
-				"car": 3,
-				"truck": 0
-			},
-			"left_turn": {
-				"car": 0,
-				"truck": 0
-			},
-			"right_turn": {
-				"car": 0,
-				"truck": 0
-			},
-			"uturn": {
-				"car": 0,
-				"truck": 0
-			}
-		},
-		"bike_boundary_nb": {
-			"bicycle": 0
-		},
-		"bike_boundary_sb": {
-			"bicycle": 0
-		},
-		"pedestrian_boundary_nb": {
-			"pedestrian": 0
-		},
-		"pedestrian_boundary_sb": {
-			"pedestrian": 0
-		}
-	  },
 
 	  "parking_results":{
 		"parking_space_0":{

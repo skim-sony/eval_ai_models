@@ -8,12 +8,9 @@
       "event_id": 0,
       "event_type": "park_start",
       "event_purpose": "parcel_delivery",
-      "event_location": {
-        "type": "Feature",
-        "properties": { 
-          "timestamp": 1696161600000,
-          "speed": 1.21
-        },
+      "event_location": { 
+        "timestamp": 1696161600000,
+        "speed": 1.21,
         "geometry": {
           "type": "Point",
           "coordinates": [ -85.7629808, 38.257341 ]
@@ -39,11 +36,8 @@
       "event_type": "park_end",
       "event_purpose": "parcel_delivery",
       "event_location": {
-        "type": "Feature",
-        "properties": { 
-          "timestamp": 1696161600000,
-          "speed": 1.21
-        },
+        "timestamp": 1696161600000,
+        "speed": 1.21,
         "geometry": {
           "type": "Point",
           "coordinates": [ -85.7629808, 38.257341 ]
@@ -123,11 +117,8 @@
       "curb_object_id": "asset_0",
       "curb_object_type": "signal_cabinet",
       "event_location": {
-        "type": "Feature",
-        "properties": { 
-          "timestamp": 1696161600000,
-          "dwell_time": 300
-        },
+        "timestamp": 1696161600000,
+        "dwell_time": 300,
         "geometry": {
           "type": "Point",
           "coordinates": [ -85.7629808, 38.257341 ]
@@ -136,7 +127,26 @@
       "status": "on",
       "curb_area_ids": ["s_4th_st"],
       "curb_zone_id": "sidewalk_0",
-      "object_ids": [10]
+      "intruder_ids": [10]
+    }
+  },
+  {
+    "frame_id": 75,
+    "timestamp": "2023-10-01T12:00:00Z",
+
+    "ped_event": {
+      "event_id": 5,
+      "event_type": "enter_area",
+      "ped_monitor_zone_id": "ped_zone_0",
+      "pedestrian_ids": [10],
+      "event_location": {
+        "timestamp": 1696161600000,
+        "geometry": {
+          "type": "Point",
+          "coordinates": [ -85.7629808, 38.257341 ]
+        }
+      },
+      "alarm_status": "on"
     }
   }
 ]

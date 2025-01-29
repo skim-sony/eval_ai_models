@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "aitrios:app:output:main",
   "title": "Main schema for output",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "type": "object",
   "properties": {  
     "outputs": {
@@ -19,7 +19,8 @@
 
           "curb_mgmt_event": { "$ref": "schema/curb_management/curb_event_output_schema.json" },
           "counting_event": { "$ref": "schema/traffic_counting/counting_event_output_schema.json" },
-          "asset_event": { "$ref": "schema/asset_monitoring/asset_event_output_schema.json" }
+          "asset_event": { "$ref": "schema/asset_monitoring/asset_event_output_schema.json" },
+          "ped_event": { "$ref": "schema/pedestrian_safety/ped_event_output_schema.json" }
         }
       },
       "additionalProperties": false
